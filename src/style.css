@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #bb5644;
+}
+
+/* Header */
+.header {
+    height: 110px;
+}
+.header-wrapper {
+    display: flex;
+    font-family: "Bodoni Moda";
+    height: 110px;
+}
+.nav-menu {
+    width: 40%;
+    padding-top: 25px;
+}
+.nav-menu ul li {
+    float: left;
+    margin-right: 10px;
+    list-style-type: none;
+    display: block;
+    height: 100%;
+}
+.nav-menu ul li a {
+    padding: 25px 0;
+    width: 50px;
+    height: 80px;
+}
+.nav-menu ul li a span {
+    padding: 0 20px;
+    display: block;
+}
+.logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.home-icon {
+    background-image: url(image/home-icon.svg);
+}
+.logo a {
+    width: 60px;
+    height: 80px;
+}
+.logo a img {
+    width: 60px;
+    height: 80px;
+}
+.top-bar-right {
+    width: 40%;
+}
+.top-bar-right ul li {
+    float: right;
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+/* Header */
