@@ -1,0 +1,144 @@
+.data-under-slider {
+    padding: 40px 0 90px;
+}
+.data-under-slider-container {
+    max-width: 90%;
+    margin: auto;
+    font-family: Bodoni Moda;
+    p {
+        font-size: 42px;
+        line-height: 48px;
+        color: #444;
+        margin-bottom: 5px;
+        &:last-child {
+            font-size: 15px;
+            color: #2d2e36;
+            line-height: 20px;
+            margin: 0;
+        }
+    }
+}
+.d-u-s-content {
+    margin: 0 10px;
+}
+.main-categories-container {
+    background-color: #413732;
+    height: 655px;
+    text-align: center;
+    img {
+        position: relative;
+        bottom: 50px;
+        z-index: 10;
+        padding-bottom: 25px;
+    }
+}
+.exclusive-products {
+    max-width: 1100px;
+    margin: auto;
+    p {
+        font-size: 80px;
+        line-height: 72px;
+        color: #fdf7f2;
+        font-family: Bodoni Moda;
+        &:last-child {
+            font-size: 32px;
+            line-height: 42px;
+            margin-top: 10px;
+        }
+    }
+}
+.categories {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    margin-top: 100px;
+    div {
+        transition: all 0.2s ease-in-out;
+        p {
+            color: #fdf7f2;
+            font-size: 20px;
+            line-height: 28px;
+            font-family: Jost;
+            margin: auto;
+            margin-top: 30px;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}
+.categories-image {
+    border: 1px solid #564b45;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    img {
+        position: relative;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+.categories-block {
+    height: 225px;
+}
+.categories-block-hover {
+    width: 159px;
+    height: 225px;
+    position: relative;
+    padding: 20px;
+    &:hover {
+        border: 1px solid #564b45;
+        transform: translateY(-10px);
+        p {
+            background-color: #bb5644;
+            &:last-child {
+                background-color: #413732;
+            }
+        }
+    }
+}
+.main-under-products-img {
+    height: 808px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(30, 44, 192, 0) 50%,
+        #413732 50%
+    );
+    padding: 0 5%;
+}
+.new-spring-collection {
+    background-image: url(https://themes.muffingroup.com/be/jeweler2/wp-content/uploads/2022/04/jeweler2-wrap-bg1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 295px 15% 297px 5%;
+}
+.n-s-c-title {
+    font-size: 80px;
+    line-height: 72px;
+    color: white;
+    font-family: Bodoni Moda;
+    font-weight: 400;
+}
+.discount-20-percent-off {
+    background-image: url(https://themes.muffingroup.com/be/jeweler2/wp-content/uploads/2022/04/jeweler2-wrap-bg2.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 250px 15% 210px 5%;
+    p {
+        width: 70%;
+        margin-bottom: 50px;
+        font-family: Jost;
+        color: #626262;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+.d-20-p-o-title {
+    font-size: 80px;
+    line-height: 79px;
+    color: #4e4540;
+    font-family: Bodoni Moda;
+    font-weight: 400;
+    margin-bottom: 20px;
+}

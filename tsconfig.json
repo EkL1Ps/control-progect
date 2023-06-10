@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/components/Product/ProductListItem.tsx", "src/components/Product/ProductList.tsx", "components/Products", "src/utils"  ]
 }
