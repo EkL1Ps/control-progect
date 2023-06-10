@@ -1,6 +1,7 @@
 import ProductListItem from './ProductListItem'
 import './ProductList.scss'
 import './ProductListItem.scss'
+import productsArray from '../../utils/productsArray'
 
 type Props = {}
 
@@ -13,10 +14,11 @@ const ProductList = (props: Props) => {
                     <h2 className="products-typography">PRODUCTS</h2>
                 </div>
                 <div className="row main-card">
-                    <ProductListItem />
-                    <ProductListItem />
-                    <ProductListItem />
-                    <ProductListItem />
+                    {productsArray.map(({ id, title, price }) => (
+                        <div className="col-3 product-card" key={id}>
+                            <ProductListItem title={title} price={price} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </>

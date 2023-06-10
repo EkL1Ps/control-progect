@@ -1,18 +1,15 @@
 type Props = {
-    // image: string
-    // title: string
-    // price: number
+    title: string
+    price: number
 }
 
-const ProductListItem = (props: Props) => {
+const ProductListItem = ({ title, price }: Props) => {
     return (
         <>
-            <div className="col-3 product-card ">
-                <a href="#" className="card-content">
-                    <h5 className="product-title">coin</h5>
-                    <div className="price">$ 10</div>
-                </a>
-            </div>
+            <a href="#" className="card-content">
+                <h5 className="product-title">{title}</h5>
+                <div className="price">${price}</div>
+            </a>
         </>
     )
 }
