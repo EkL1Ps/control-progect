@@ -8,10 +8,10 @@ const ProductListItem = (props: Props) => {
     return (
         <>
             <div className="col-3 product-card ">
-                <div className="card-content">
+                <a href="#" className="card-content">
                     <h5 className="product-title">coin</h5>
                     <div className="price">$ 10</div>
-                </div>
+                </a>
             </div>
         </>
     )
