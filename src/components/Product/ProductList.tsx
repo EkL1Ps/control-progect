@@ -14,9 +14,14 @@ const ProductList = (props: Props) => {
                     <h2 className="products-typography">PRODUCTS</h2>
                 </div>
                 <div className="row main-card">
-                    {productsArray.map(({ id, title, price }) => (
+                    {productsArray.map(({ id, title, price, image, alt }) => (
                         <div className="col-3 product-card" key={id}>
-                            <ProductListItem title={title} price={price} />
+                            <ProductListItem
+                                title={title}
+                                price={price}
+                                image={image}
+                                alt={alt}
+                            />
                         </div>
                     ))}
                 </div>
