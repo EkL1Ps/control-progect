@@ -1,0 +1,78 @@
+.footer {
+    width: 90%;
+    margin: 100px 5% 0;
+}
+.footer-image {
+    display: flex;
+    height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.footer-widget-wrapper {
+    width: 1100px;
+    margin: 100px auto;
+    font-family: Jost;
+    color: #2d2e36;
+    h3 {
+        color: #2d2e36;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style-type: none;
+        text-decoration: none;
+        margin-bottom: 20px;
+        a {
+            color: #2d2e36;
+            &:hover {
+                color: #bb5644;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.footer-widget-first {
+    img {
+        margin-bottom: 5px;
+    }
+    p {
+        line-height: 20px;
+        margin-bottom: 30px;
+        color: #2d2e36;
+    }
+}
+.footer-widget-fourth {
+    h2 {
+        font-weight: 400;
+        color: #2d2e36;
+
+        &:hover {
+            color: #bb5644;
+            text-decoration: underline;
+        }
+    }
+    p {
+        margin-top: 20px;
+        line-height: 20px;
+        color: #2d2e36;
+    }
+    ul {
+        margin-top: 20px;
+        li {
+            line-height: 20px;
+            color: #2d2e36;
+        }
+    }
+}
+.by-who {
+    color: #2d2e36;
+    margin-top: 100px;
+    a:hover {
+        text-decoration: underline;
+    }
+}
+.credit-cards {
+    margin-top: 50px;
+}

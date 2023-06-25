@@ -1,6 +1,9 @@
 import React from 'react'
 import './Header.scss'
 import HeaderLogo from './Logo/header-logo.svg'
+import HeaderProfile from './image/header-profile.svg'
+import HeaderLike from './image/header-like.svg'
+import HeaderBag from './image/header-bag.svg'
 
 type Props = {}
 
@@ -36,16 +39,26 @@ const Header = (props: Props) => {
                     <div className="top-bar-right">
                         <div className="top-bar-right-nav">
                             <a href="#">
-                                <span>profile</span>
+                                <div>
+                                    <img src={HeaderProfile} alt="profile" />
+                                </div>
                             </a>
                             <a href="#">
-                                <span>liked</span>
+                                <div>
+                                    <img src={HeaderLike} alt="like" />
+                                    <span className="quantity-of-liked">0</span>
+                                </div>
                             </a>
                             <a href="#">
-                                <span>basket</span>
+                                <div>
+                                    <img src={HeaderBag} alt="basket" />
+                                    <span className="quantity-in-basket">
+                                        0
+                                    </span>
+                                </div>
                             </a>
                             <a href="#">
-                                <span>money</span>
+                                <div>$0.00</div>
                             </a>
                         </div>
                     </div>

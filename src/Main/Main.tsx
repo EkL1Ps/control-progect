@@ -8,6 +8,16 @@ import Necklaces from './main-image/Necklaces.svg'
 import Rings from './main-image/Rings.svg'
 import Tiaras from './main-image/Tiaras.svg'
 import Watches from './main-image/Watches.svg'
+import MainSinceImage from './main-image/since-block-image.webp'
+import SaloImage from './main-image/salo-image.webp'
+import SutterSpeed from './main-image/sutter-speed.svg'
+import NaturalCompany from './main-image/naturalbllablabla.svg'
+import UrbanCompany from './main-image/urbancompany.svg'
+import SemmerCompany from './main-image/semmercompany.svg'
+import IconicCompany from './main-image/iconiccompany.svg'
+import AliseBoutiqus from './main-image/alisaboutiqus.svg'
+import PlantRegister from './main-image/plantregister.webp'
+import Footer from '../Footer/Footer'
 
 type Props = {}
 
@@ -127,6 +137,134 @@ const Main = (props: Props) => {
                 </div>
             </div>
             <ProductList />
+            <div className="main-since">
+                <div className="row">
+                    <div className="since">
+                        <h3>since</h3>
+                        <p className="since-date n-s-c-title">1990</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Optio tempore rem voluptatem asperiores
+                            reprehenderit autem atque?
+                        </p>
+                    </div>
+                    <div className="col-2">
+                        <img
+                            className="main-since-image"
+                            src={MainSinceImage}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="col-5 since-info">
+                        <p>
+                            <span className="since-numbers">35</span>
+                            <br />
+                            Shops all over the world
+                        </p>
+                        <p>
+                            <span className="since-numbers">98%</span>
+                            <br />
+                            Of happy clients
+                        </p>
+                        <p>
+                            <span className="since-numbers">58</span>
+                            <br />
+                            Top products used by
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="surprise-a-loved-one">
+                <img src={HerbLogo} alt="logo" />
+                <div className="s-a-l-o-title">
+                    <p>VESTIBULUM</p>
+                    <h2>
+                        SURPRICE
+                        <br />A LOVED ONE
+                    </h2>
+                </div>
+                <div className="s-a-l-o-content">
+                    <div className="row">
+                        <div className="s-a-l-o-content-container">
+                            <h2>01</h2>
+                            <h3>Viverra venenatis donec</h3>
+                            <p>
+                                Vestibulum ante ipsum primis in faucibus orci
+                                luctus
+                            </p>
+                            <h2>02</h2>
+                            <h3>Id augue fermentum</h3>
+                            <p>
+                                Aliquam nisi blandit aliquet etiam dolor
+                                pellentesque
+                            </p>
+                        </div>
+                        <div className="s-a-l-o-image-container">
+                            <img
+                                className="s-a-l-o-image"
+                                src={SaloImage}
+                                alt="image"
+                            />
+                        </div>
+                        <div className="s-a-l-o-content-container t-a-left">
+                            <h2>03</h2>
+                            <h3>Semper commodo dollud</h3>
+                            <p>
+                                Dui curabitur elit orci feugiat elementum sapien
+                            </p>
+                            <h2>04</h2>
+                            <h3>Vitae nunc integer vitae</h3>
+                            <p>
+                                Dictumst dolor sed fringilla curabitur hendrerit
+                                vestibulum
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" className="scarlet-button">
+                    See offer
+                </a>
+            </div>
+            <div className="partners-title">
+                <div className="partners">
+                    <div className="row">
+                        <div className="col-6 ">
+                            <img src={SutterSpeed} alt="image" />
+                        </div>
+                        <div className="col-6">
+                            <img src={NaturalCompany} alt="image" />
+                        </div>
+                        <div className="col-6">
+                            <img src={UrbanCompany} alt="image" />
+                        </div>
+                        <div className="col-6">
+                            <img src={SemmerCompany} alt="image" />
+                        </div>
+                        <div className="col-6">
+                            <img src={IconicCompany} alt="image" />
+                        </div>
+                        <div className="col-6">
+                            <img src={AliseBoutiqus} alt="image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="main-register">
+                <img src={PlantRegister} alt="image" />
+                <h6 className="vestibulum">VESTIBULUM</h6>
+                <p>
+                    Subscribe to our newsletter
+                    <br />
+                    and grab <span>30% OFF!</span>
+                </p>
+                <div>
+                    <input type="email" placeholder="Your e-mail" />
+                    <a href="#" className="scarlet-button">
+                        Sigh Up
+                    </a>
+                </div>
+            </div>
+            <Footer />
         </>
     )
 }

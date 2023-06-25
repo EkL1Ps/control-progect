@@ -26,6 +26,9 @@ const ProductList = (props: Props) => {
                     ))}
                 </div>
             </div>
+            <a href="#" className="scarlet-button product-button">
+                Go to shop
+            </a>
         </>
     )
 }
