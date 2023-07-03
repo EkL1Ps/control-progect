@@ -49,6 +49,27 @@ const productsArray: Product[] = [
         image: "/images/light-earrings.webp",
         alt: "image",
     },
+    {
+        id: 7,
+        title: 'Light earrings',
+        price: 12,
+        image: "/images/light-earrings.webp",
+        alt: "image",
+    },
+    {
+        id: 8,
+        title: 'Light earrings',
+        price: 12,
+        image: "/images/light-earrings.webp",
+        alt: "image",
+    },
+    {
+        id: 9,
+        title: 'Light earrings',
+        price: 12,
+        image: "/images/light-earrings.webp",
+        alt: "image",
+    },
 ]
 
 export default productsArray

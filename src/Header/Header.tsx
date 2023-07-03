@@ -4,6 +4,7 @@ import HeaderLogo from './Logo/header-logo.svg'
 import HeaderProfile from './image/header-profile.svg'
 import HeaderLike from './image/header-like.svg'
 import HeaderBag from './image/header-bag.svg'
+import MenuItem from './MenuItem'
 
 type Props = {}
 
@@ -15,56 +16,57 @@ const Header = (props: Props) => {
                     <div className="nav-menu">
                         <ul>
                             <li>
-                                <a href="http://localhost:3000/">Home</a>
+                                <MenuItem to="/">Home</MenuItem>
                             </li>
                             <li>
-                                <a href="#">Products</a>
+                                <MenuItem to="/products">Products</MenuItem>
                             </li>
                             <li>
-                                <a href="#">Inspirations</a>
+                                <MenuItem to="/inspirations">
+                                    Inspirations
+                                </MenuItem>
                             </li>
                             <li>
-                                <a href="#">About</a>
+                                <MenuItem to="/about">About</MenuItem>
                             </li>
                             <li>
-                                <a href="#">Contacts</a>
+                                <MenuItem to="/contacts">Contacts</MenuItem>
                             </li>
                         </ul>
                     </div>
                     <div className="logo">
-                        <a href="http://localhost:3000/">
+                        <div>
                             <img src={HeaderLogo} alt="logo" />
-                        </a>
+                        </div>
                     </div>
                     <div className="top-bar-right">
                         <div className="top-bar-right-nav">
-                            <a href="#">
+                            <p>
                                 <div>
                                     <img src={HeaderProfile} alt="profile" />
                                 </div>
-                            </a>
-                            <a href="#">
+                            </p>
+                            <p>
                                 <div>
                                     <img src={HeaderLike} alt="like" />
                                     <span className="quantity-of-liked">0</span>
                                 </div>
-                            </a>
-                            <a href="#">
+                            </p>
+                            <p>
                                 <div>
                                     <img src={HeaderBag} alt="basket" />
                                     <span className="quantity-in-basket">
                                         0
                                     </span>
                                 </div>
-                            </a>
-                            <a href="#">
+                            </p>
+                            <p>
                                 <div>$0.00</div>
-                            </a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </header>
-            <div className="slider">slider</div>
         </>
     )
 }

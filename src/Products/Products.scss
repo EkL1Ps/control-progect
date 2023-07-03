@@ -1,0 +1,38 @@
+.products-title {
+    text-align: center;
+    .vestibulum {
+        justify-content: center;
+        margin: 0 0 20px;
+    }
+}
+.products-title-h1 {
+    font-family: Bodoni Moda;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 72px;
+}
+.filter-tools {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 2%;
+    display: flex;
+    justify-content: right;
+    a {
+        font-size: 20px;
+        line-height: 18px;
+        font-family: Jost;
+        color: #626262;
+        width: 74px;
+        align-items: center;
+        display: flex;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+}

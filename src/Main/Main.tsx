@@ -24,6 +24,8 @@ type Props = {}
 const Main = (props: Props) => {
     return (
         <>
+            <div className="slider">slider</div>
+
             <div className="data-under-slider">
                 <div className="data-under-slider-container">
                     <div className="row">
@@ -136,7 +138,16 @@ const Main = (props: Props) => {
                     </div>
                 </div>
             </div>
-            <ProductList />
+            <div className="product-list-container">
+                <div className="main-product-title">
+                    <h6 className="vestibulum">VESTIBULUM</h6>
+                    <h2 className="products-typography">PRODUCTS</h2>
+                </div>
+                <ProductList />
+                <a href="#" className="scarlet-button product-button">
+                    Go to shop
+                </a>
+            </div>
             <div className="main-since">
                 <div className="row">
                     <div className="since">
@@ -264,8 +275,6 @@ const Main = (props: Props) => {
                     </a>
                 </div>
             </div>
-            <Footer />
-            <div></div>
         </>
     )
 }
