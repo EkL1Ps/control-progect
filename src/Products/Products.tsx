@@ -8,7 +8,7 @@ const Products = (props: Props) => {
         <>
             <div className="products-title">
                 <div className="vestibulum">BEJEWELERY</div>
-                <div className="products-title-h1">PRODUCTS</div>
+                <div className="title-h1">PRODUCTS</div>
             </div>
             <div className="products-container">
                 <div className="product-list-container">

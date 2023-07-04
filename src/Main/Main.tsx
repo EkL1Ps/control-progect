@@ -1,4 +1,3 @@
-import React from 'react'
 import './Main.scss'
 import ProductList from '../components/Product/ProductList'
 import HerbLogo from './main-image/herb-logo.svg'
@@ -16,9 +15,7 @@ import UrbanCompany from './main-image/urbancompany.svg'
 import SemmerCompany from './main-image/semmercompany.svg'
 import IconicCompany from './main-image/iconiccompany.svg'
 import AliseBoutiqus from './main-image/alisaboutiqus.svg'
-import PlantRegister from './main-image/plantregister.webp'
-import Footer from '../Footer/Footer'
-
+import Email from '../Email/Email'
 type Props = {}
 
 const Main = (props: Props) => {
@@ -260,21 +257,7 @@ const Main = (props: Props) => {
                     </div>
                 </div>
             </div>
-            <div className="main-register">
-                <img src={PlantRegister} alt="image" />
-                <h6 className="vestibulum">VESTIBULUM</h6>
-                <p>
-                    Subscribe to our newsletter
-                    <br />
-                    and grab <span>30% OFF!</span>
-                </p>
-                <div>
-                    <input type="email" placeholder="Your e-mail" />
-                    <a href="#" className="scarlet-button">
-                        Sigh Up
-                    </a>
-                </div>
-            </div>
+            <Email />
         </>
     )
 }

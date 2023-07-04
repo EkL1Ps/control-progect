@@ -46,3 +46,9 @@
 .t-a-left {
     text-align: left;
 }
+.title-h1 {
+    font-family: Bodoni Moda;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 72px;
+}
