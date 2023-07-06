@@ -7,6 +7,9 @@
     text-decoration: none;
     color: #bb5644;
 }
+body {
+    background-color: rgb(255, 248, 238);
+}
 .row {
     display: flex;
 }
@@ -51,4 +54,7 @@
     font-size: 80px;
     font-weight: 400;
     line-height: 72px;
+}
+.m-r-0 {
+    margin-right: 0 !important;
 }

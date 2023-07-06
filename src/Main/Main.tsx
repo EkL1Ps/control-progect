@@ -7,7 +7,6 @@ import Necklaces from './main-image/Necklaces.svg'
 import Rings from './main-image/Rings.svg'
 import Tiaras from './main-image/Tiaras.svg'
 import Watches from './main-image/Watches.svg'
-import MainSinceImage from './main-image/since-block-image.webp'
 import SaloImage from './main-image/salo-image.webp'
 import SutterSpeed from './main-image/sutter-speed.svg'
 import NaturalCompany from './main-image/naturalbllablabla.svg'
@@ -16,6 +15,9 @@ import SemmerCompany from './main-image/semmercompany.svg'
 import IconicCompany from './main-image/iconiccompany.svg'
 import AliseBoutiqus from './main-image/alisaboutiqus.svg'
 import Email from '../Email/Email'
+import { NavLink } from 'react-router-dom'
+import Since from '../Since/Since'
+
 type Props = {}
 
 const Main = (props: Props) => {
@@ -129,9 +131,9 @@ const Main = (props: Props) => {
                             Dolorum at sunt explicabo illum odio architecto
                             consequuntur vel qui quod ipsum.
                         </p>
-                        <a href="#" className="scarlet-button">
-                            Products
-                        </a>
+                        <NavLink to="/products">
+                            <div className="scarlet-button">Products</div>
+                        </NavLink>
                     </div>
                 </div>
             </div>
@@ -141,47 +143,13 @@ const Main = (props: Props) => {
                     <h2 className="products-typography">PRODUCTS</h2>
                 </div>
                 <ProductList />
-                <a href="#" className="scarlet-button product-button">
-                    Go to shop
-                </a>
+                <NavLink to="/products">
+                    <div className="scarlet-button product-button">
+                        Go to shop
+                    </div>
+                </NavLink>
             </div>
-            <div className="main-since">
-                <div className="row">
-                    <div className="since">
-                        <h3>since</h3>
-                        <p className="since-date n-s-c-title">1990</p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Optio tempore rem voluptatem asperiores
-                            reprehenderit autem atque?
-                        </p>
-                    </div>
-                    <div className="col-2">
-                        <img
-                            className="main-since-image"
-                            src={MainSinceImage}
-                            alt="image"
-                        />
-                    </div>
-                    <div className="col-5 since-info">
-                        <p>
-                            <span className="since-numbers">35</span>
-                            <br />
-                            Shops all over the world
-                        </p>
-                        <p>
-                            <span className="since-numbers">98%</span>
-                            <br />
-                            Of happy clients
-                        </p>
-                        <p>
-                            <span className="since-numbers">58</span>
-                            <br />
-                            Top products used by
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <Since />
             <div className="surprise-a-loved-one">
                 <img src={HerbLogo} alt="logo" />
                 <div className="s-a-l-o-title">

@@ -4,6 +4,7 @@ import InspirationsSecondImage from './images/inspirations-second.webp'
 import InspirationsThirdImage from './images/inspirations-third.webp'
 import InspirationsFourthImage from './images/inspirations-fourt.webp'
 import Email from '../Email/Email'
+import { NavLink } from 'react-router-dom'
 
 type Props = {}
 
@@ -51,9 +52,11 @@ const Inspirations = (props: Props) => {
                                 tincidunt sociis. Purus magna in diam neque,
                                 commodo egestas aliquam blandit.
                             </p>
-                            <button className="scarlet-button">
-                                See at the store
-                            </button>
+                            <NavLink to="/products">
+                                <button className="scarlet-button">
+                                    See at the store
+                                </button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
@@ -73,9 +76,11 @@ const Inspirations = (props: Props) => {
                                 ornare tincidunt amet hendrerit elementum ad
                                 habitant.
                             </p>
-                            <button className="scarlet-button">
-                                See at the store
-                            </button>
+                            <NavLink to="/products">
+                                <button className="scarlet-button">
+                                    See at the store
+                                </button>
+                            </NavLink>
                         </div>
                         <div className="insp-second-fourth-image-block">
                             <img src={InspirationsThirdImage} alt="image" />
@@ -101,9 +106,11 @@ const Inspirations = (props: Props) => {
                                 turpis quam conubia. Ridiculus vestibulum velit
                                 porttitor sapien blandit euismod id et.
                             </p>
-                            <button className="scarlet-button">
-                                See at the store
-                            </button>
+                            <NavLink to="/products">
+                                <button className="scarlet-button">
+                                    See at the store
+                                </button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

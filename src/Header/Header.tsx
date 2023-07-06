@@ -27,7 +27,7 @@ const Header = (props: Props) => {
                                 </MenuItem>
                             </li>
                             <li>
-                                <MenuItem to="/about">About</MenuItem>
+                                <MenuItem to="/aboutUsPage">About</MenuItem>
                             </li>
                             <li>
                                 <MenuItem to="/contacts">Contacts</MenuItem>
