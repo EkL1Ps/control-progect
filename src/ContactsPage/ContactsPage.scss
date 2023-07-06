@@ -1,0 +1,116 @@
+.contact-content-wrapper {
+    width: 1100px;
+    margin: 100px auto;
+    font-family: Jost;
+    h2 {
+        color: #2d2e36;
+        font-weight: 400;
+        text-align: right;
+        margin-bottom: 50px;
+    }
+    p {
+        color: #626262;
+        text-align: right;
+        margin: 0 0 40px 50px;
+    }
+    button {
+        border: 1px solid #bb5644;
+        margin-left: 106px;
+        background-color: rgb(255, 248, 238);
+        color: #bb5644;
+        transition: 0.2s;
+
+        &:hover {
+            color: rgb(255, 248, 238);
+        }
+    }
+}
+.product-content-second-block {
+    h2 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        font-size: 48px;
+        line-height: 58px;
+        color: #2d2e36;
+        font-family: Bodoni Moda;
+        margin: 0;
+        &:last-child {
+            font-size: 28px;
+            color: #4e4540;
+        }
+    }
+}
+.product-content-third-block {
+    h2 {
+        text-align: left;
+    }
+    p {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+.contactPage-image {
+    margin: 50px;
+    img {
+        border-radius: 0 50% 0 50%;
+        width: 100%;
+        height: 100%;
+    }
+}
+.logo-image {
+    position: relative;
+    z-index: 10;
+    top: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.question-card {
+    width: 1100px;
+    margin: auto;
+    background-color: #fff;
+}
+.question-card-content {
+    margin-top: 30px;
+    display: flex;
+}
+.question-card-inputs {
+    margin: 50px 0 0 50px;
+    input,
+    textarea {
+        width: 400px;
+        height: 40px;
+        border: 0;
+        border-bottom: 1px solid #4e4540;
+        margin-bottom: 20px;
+        font-family: Jost;
+        font-size: 15px;
+        color: #7b7876;
+        outline: none;
+    }
+    textarea {
+        height: 100px;
+    }
+    h2 {
+        text-align: left;
+        width: 220px;
+        font-size: 32px;
+        line-height: 40px;
+        color: #4e4540;
+        font-family: Bodoni Moda;
+    }
+}
+.submit-scarlet-button {
+    width: 400px;
+    text-align: center;
+    color: rgb(255, 248, 238);
+    transition: 0.2s;
+    border: 0;
+    padding: 15px;
+    &:hover {
+        color: #bb5644;
+        background-color: rgb(255, 248, 238);
+        border: 1px solid #bb5644;
+    }
+}

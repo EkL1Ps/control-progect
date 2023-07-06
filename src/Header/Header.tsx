@@ -5,6 +5,7 @@ import HeaderProfile from './image/header-profile.svg'
 import HeaderLike from './image/header-like.svg'
 import HeaderBag from './image/header-bag.svg'
 import MenuItem from './MenuItem'
+import { NavLink } from 'react-router-dom'
 
 type Props = {}
 
@@ -30,7 +31,7 @@ const Header = (props: Props) => {
                                 <MenuItem to="/aboutUsPage">About</MenuItem>
                             </li>
                             <li>
-                                <MenuItem to="/contacts">Contacts</MenuItem>
+                                <MenuItem to="/contactsPage">Contacts</MenuItem>
                             </li>
                         </ul>
                     </div>
@@ -48,8 +49,12 @@ const Header = (props: Props) => {
                             </p>
                             <p>
                                 <div>
-                                    <img src={HeaderLike} alt="like" />
-                                    <span className="quantity-of-liked">0</span>
+                                    <NavLink to={'/wishList'}>
+                                        <img src={HeaderLike} alt="like" />
+                                        <span className="quantity-of-liked">
+                                            0
+                                        </span>
+                                    </NavLink>
                                 </div>
                             </p>
                             <p>
