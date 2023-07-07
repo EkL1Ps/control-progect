@@ -7,6 +7,8 @@ import Inspirations from '../Inspirations/Inspirations'
 import AboutUsPage from '../AboutUsPage/AboutUsPage'
 import ContactsPage from '../ContactsPage/ContactsPage'
 import WishList from '../WishList/WishList'
+import BasketPage from '../BasketPage/BasketPage'
+import ProductListItemPage from '../ProductListItemPage/ProductListItemPage'
 
 const App = () => {
     return (
@@ -19,6 +21,11 @@ const App = () => {
                 <Route path="/aboutUsPage" element={<AboutUsPage />} />
                 <Route path="/contactsPage" element={<ContactsPage />} />
                 <Route path="/wishList" element={<WishList />} />
+                <Route path="/basketPage" element={<BasketPage />} />
+                <Route
+                    path="/productListItemPage"
+                    element={<ProductListItemPage />}
+                />
             </Routes>
             <Footer />
         </>

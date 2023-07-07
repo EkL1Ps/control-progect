@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 type Props = {
     title: string
     price: number
@@ -8,11 +10,11 @@ type Props = {
 const ProductListItem = ({ title, price, image, alt }: Props) => {
     return (
         <>
-            <a href="#" className="card-content">
+            <NavLink to={'/productListItemPage'} className="card-content">
                 <img src={image} alt={alt} />
                 <h5 className="product-title">{title}</h5>
                 <div className="price">${price}</div>
-            </a>
+            </NavLink>
         </>
     )
 }

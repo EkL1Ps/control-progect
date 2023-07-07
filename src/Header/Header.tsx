@@ -59,10 +59,12 @@ const Header = (props: Props) => {
                             </p>
                             <p>
                                 <div>
-                                    <img src={HeaderBag} alt="basket" />
-                                    <span className="quantity-in-basket">
-                                        0
-                                    </span>
+                                    <NavLink to={'/basketPage'}>
+                                        <img src={HeaderBag} alt="basket" />
+                                        <span className="quantity-in-basket">
+                                            0
+                                        </span>
+                                    </NavLink>
                                 </div>
                             </p>
                             <p>
