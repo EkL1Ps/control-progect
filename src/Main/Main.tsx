@@ -17,6 +17,7 @@ import AliseBoutiqus from './main-image/alisaboutiqus.svg'
 import Email from '../Email/Email'
 import { NavLink } from 'react-router-dom'
 import Since from '../Since/Since'
+import productsArray from '../utils/productsArray'
 
 type Props = {}
 

@@ -10,7 +10,7 @@ type Props = {
 const ProductListItem = ({ title, price, image, alt }: Props) => {
     return (
         <>
-            <NavLink to={'/productListItemPage'} className="card-content">
+            <NavLink to={'/productListPage'} className="card-content">
                 <img src={image} alt={alt} />
                 <h5 className="product-title">{title}</h5>
                 <div className="price">${price}</div>

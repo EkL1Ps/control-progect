@@ -1,4 +1,3 @@
-import React from 'react'
 import './Header.scss'
 import HeaderLogo from './Logo/header-logo.svg'
 import HeaderProfile from './image/header-profile.svg'
@@ -17,7 +16,9 @@ const Header = (props: Props) => {
                     <div className="nav-menu">
                         <ul>
                             <li>
-                                <MenuItem to="/">Home</MenuItem>
+                                <MenuItem to="/">
+                                    <span>Home</span>
+                                </MenuItem>
                             </li>
                             <li>
                                 <MenuItem to="/products">Products</MenuItem>

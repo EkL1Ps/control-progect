@@ -4,6 +4,7 @@ type Product = {
     price: number
     image: string
     alt: string
+    description: string
 }
 
 const productsArray: Product[] = [
@@ -13,6 +14,8 @@ const productsArray: Product[] = [
         price: 10,
         image: '/images/dark-earrings.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 2,
@@ -20,6 +23,8 @@ const productsArray: Product[] = [
         price: 12,
         image: '/images/fancy-earrings.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 3,
@@ -27,6 +32,8 @@ const productsArray: Product[] = [
         price: 100,
         image: '/images/gold-necklace.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 4,
@@ -34,6 +41,8 @@ const productsArray: Product[] = [
         price: 35,
         image: '/images/gold-ring.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 5,
@@ -41,6 +50,8 @@ const productsArray: Product[] = [
         price: 1480,
         image: '/images/head-crown.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 6,
@@ -48,6 +59,8 @@ const productsArray: Product[] = [
         price: 12,
         image: '/images/light-earrings.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 7,
@@ -55,6 +68,8 @@ const productsArray: Product[] = [
         price: 1120,
         image: '/images/Queen-bracelet.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 8,
@@ -62,6 +77,8 @@ const productsArray: Product[] = [
         price: 35,
         image: '/images/Silver-ring.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
     {
         id: 9,
@@ -69,6 +86,8 @@ const productsArray: Product[] = [
         price: 320,
         image: '/images/Wedding-ring.webp',
         alt: 'image',
+        description:
+            'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
     },
 ]
 

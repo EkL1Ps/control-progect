@@ -1,6 +1,7 @@
 import './Products.scss'
 import ProductList from '../components/Product/ProductList'
 import FilterIcon from './images/Filter-icon.svg'
+import productsArray from '../utils/productsArray'
 
 type Props = {}
 const Products = (props: Props) => {
