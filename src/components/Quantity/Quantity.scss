@@ -1,0 +1,43 @@
+.quantity {
+    border: 1px solid black;
+    width: 130px;
+    height: 52px;
+    display: flex;
+    margin: 50px 10px 0 0;
+
+    input {
+        width: 40%;
+        text-align: center;
+        border: 0;
+        color: #696969;
+        font-size: 20px;
+        font-family: Jost;
+    }
+    button {
+        width: 30%;
+        font-size: 28px;
+        color: black;
+        background-color: white;
+        border: 0;
+    }
+}
+.add-to-cart-btn {
+    margin: 50px 0 0;
+    width: 60%;
+    button {
+        height: 52px;
+        width: 100%;
+        border: 0;
+        background-color: #bb5644;
+        color: white;
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.3s;
+        &:hover {
+            border: 1px solid #bb5644;
+            color: #bb5644;
+            background-color: white;
+        }
+    }
+}
