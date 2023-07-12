@@ -5,6 +5,7 @@ type Product = {
     image: string
     alt: string
     description: string
+    categories: string
 }
 
 const productsArray: Product[] = [
@@ -16,6 +17,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'earrings',
     },
     {
         id: 2,
@@ -25,6 +27,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'earrings',
     },
     {
         id: 3,
@@ -34,6 +37,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'necklace',
     },
     {
         id: 4,
@@ -43,6 +47,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'ring',
     },
     {
         id: 5,
@@ -52,6 +57,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'crown',
     },
     {
         id: 6,
@@ -61,6 +67,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'earrings',
     },
     {
         id: 7,
@@ -70,6 +77,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'bracelet',
     },
     {
         id: 8,
@@ -79,6 +87,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'ring',
     },
     {
         id: 9,
@@ -88,6 +97,7 @@ const productsArray: Product[] = [
         alt: 'image',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
+        categories: 'ring',
     },
 ]
 

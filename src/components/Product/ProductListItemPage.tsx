@@ -7,24 +7,41 @@ import EasyPaymentImg from './images/easy-payment.svg'
 import HoursDeliveryImg from './images/hours-delivery.svg'
 import SelfPageWoman from './images/woman-self-page.webp'
 
-type Props = {}
+type Props = {
+    title: string
+    price: number
+    description: string
+    image: string
+    alt: string
+    categories: string
+}
 
-const ProductListItemPage = (props: Props) => {
+const ProductListItemPage = ({
+    title,
+    price,
+    description,
+    image,
+    alt,
+    categories,
+}: Props) => {
     return (
         <>
             <div className="selfPage-product-list-item-wrapper">
                 <div className="row">
                     <div className="col-2 selfPage-product-image">
-                        <img src={SilverRing} alt="image" />
+                        <img src={image} alt={alt} />
                     </div>
                     <div className="product-list-item-data">
-                        <h2 className="selfPage-product-title">Silver ring</h2>
-                        <p className="selfPage-product-price">Price: 20$</p>
+                        <h2 className="selfPage-product-title">{title}</h2>
+                        <p className="selfPage-product-price">
+                            Price: {price}$
+                        </p>
                         <p className="selfPage-product-description">
-                            Amet ipsum, enim massa enim mattis pulvinar. Pretium
+                            {/* Amet ipsum, enim massa enim mattis pulvinar. Pretium
                             sem a, sed lacus ac. Mattis sapien nunc malesuada
                             tincidunt. Libero integer velit, lorem est. Velit
-                            adipiscing scelerisque eget nunc
+                            adipiscing scelerisque eget nunc */}
+                            {description}
                         </p>
                         <Quantity />
                         <div className="possibilities">
@@ -84,7 +101,7 @@ const ProductListItemPage = (props: Props) => {
                             </div>
                         </div>
                         <p className="self-page-categories">
-                            Categories: <span>Rings</span>
+                            Categories: <span>{categories}</span>
                         </p>
                     </div>
                 </div>

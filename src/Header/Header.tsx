@@ -6,9 +6,14 @@ import HeaderBag from './image/header-bag.svg'
 import MenuItem from './MenuItem'
 import { NavLink } from 'react-router-dom'
 
-type Props = {}
+type Props = {
+    cartData: {
+        totalPrice: number
+        totalCount: number
+    }
+}
 
-const Header = (props: Props) => {
+const Header = ({ cartData }: Props) => {
     return (
         <>
             <header className="header">
@@ -63,13 +68,13 @@ const Header = (props: Props) => {
                                     <NavLink to={'/basketPage'}>
                                         <img src={HeaderBag} alt="basket" />
                                         <span className="quantity-in-basket">
-                                            0
+                                            {cartData.totalCount}
                                         </span>
                                     </NavLink>
                                 </div>
                             </p>
                             <p>
-                                <div>$0.00</div>
+                                <div>${cartData.totalPrice}.00</div>
                             </p>
                         </div>
                     </div>

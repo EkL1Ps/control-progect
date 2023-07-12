@@ -8,9 +8,28 @@ const ProductListPage = (props: Props) => {
     return (
         <>
             <div className="selfPage-product-wrapper">
-                <div className="productListItemPage">
-                    <ProductListItemPage />
-                </div>
+                {productsArray.map(
+                    ({
+                        id,
+                        title,
+                        price,
+                        image,
+                        alt,
+                        description,
+                        categories,
+                    }) => (
+                        <div className="productListItemPage" key={id}>
+                            <ProductListItemPage
+                                title={title}
+                                price={price}
+                                image={image}
+                                alt={alt}
+                                description={description}
+                                categories={categories}
+                            />
+                        </div>
+                    )
+                )}
             </div>
         </>
     )

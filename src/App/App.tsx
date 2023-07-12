@@ -9,11 +9,29 @@ import ContactsPage from '../ContactsPage/ContactsPage'
 import WishList from '../WishList/WishList'
 import BasketPage from '../BasketPage/BasketPage'
 import ProductListPage from '../components/Product/ProductListPage'
+import { useState } from 'react'
+
+type CartData = {
+    totalPrice: number
+    totalCount: number
+}
 
 const App = () => {
+    const [cartData, setCartData] = useState<CartData>({
+        totalPrice: 0,
+        totalCount: 0,
+    })
+
+    const addProductToCart = (count: number, price: number) => {
+        setCartData((prevState) => ({
+            totalCount: prevState.totalCount + count,
+            totalPrice: prevState.totalPrice + count * price,
+        }))
+    }
+
     return (
         <>
-            <Header />
+            <Header cartData={cartData} />
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/products" element={<Products />} />
