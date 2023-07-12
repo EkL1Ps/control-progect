@@ -1,5 +1,7 @@
 import './ProductListPage.scss'
 import ProductListItemPage from './ProductListItemPage'
+import productsArray from '../../utils/productsArray'
+
 type Props = {}
 
 const ProductListPage = (props: Props) => {

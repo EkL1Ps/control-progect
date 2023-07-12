@@ -15,11 +15,11 @@ const ProductListItemPage = (props: Props) => {
             <div className="selfPage-product-list-item-wrapper">
                 <div className="row">
                     <div className="col-2 selfPage-product-image">
-                        <img src={SilverRing} alt="" />
+                        <img src={SilverRing} alt="image" />
                     </div>
                     <div className="product-list-item-data">
-                        <h2 className="selfPage-product-title">Silver Ring</h2>
-                        <p className="selfPage-product-price">Price: 35$</p>
+                        <h2 className="selfPage-product-title">Silver ring</h2>
+                        <p className="selfPage-product-price">Price: 20$</p>
                         <p className="selfPage-product-description">
                             Amet ipsum, enim massa enim mattis pulvinar. Pretium
                             sem a, sed lacus ac. Mattis sapien nunc malesuada
@@ -83,6 +83,9 @@ const ProductListItemPage = (props: Props) => {
                                 </div>
                             </div>
                         </div>
+                        <p className="self-page-categories">
+                            Categories: <span>Rings</span>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@
     }
 }
 .product-list-item-data {
-    height: 2000px;
+    padding-bottom: 100px;
     background-color: white;
     margin: 100px 0 0 10%;
     padding: 0 50px;
@@ -89,5 +89,15 @@
         color: #626262;
         margin-bottom: 20px;
         width: 200px;
+    }
+}
+.self-page-categories {
+    margin-top: 50px;
+    font-family: Jost;
+    color: #949494;
+    font-weight: 500;
+    span {
+        color: #4e4540;
+        font-weight: 300;
     }
 }
