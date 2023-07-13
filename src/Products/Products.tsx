@@ -3,8 +3,10 @@ import ProductList from '../components/Product/ProductList'
 import FilterIcon from './images/Filter-icon.svg'
 import productsArray from '../utils/productsArray'
 
-type Props = {}
-const Products = (props: Props) => {
+type Props = {
+    addProductToCart: (count: number, price: number) => void
+}
+const Products = ({ addProductToCart }: Props) => {
     return (
         <>
             <div className="products-title">
@@ -19,7 +21,7 @@ const Products = (props: Props) => {
                             Filters
                         </a>
                     </div>
-                    <ProductList />
+                    <ProductList addProductToCart={addProductToCart} />
                 </div>
             </div>
         </>

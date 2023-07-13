@@ -19,9 +19,11 @@ import { NavLink } from 'react-router-dom'
 import Since from '../Since/Since'
 import productsArray from '../utils/productsArray'
 
-type Props = {}
+type Props = {
+    addProductToCart: (count: number, price: number) => void
+}
 
-const Main = (props: Props) => {
+const Main = ({ addProductToCart }: Props) => {
     return (
         <>
             <div className="slider">slider</div>
@@ -143,7 +145,7 @@ const Main = (props: Props) => {
                     <h6 className="vestibulum">VESTIBULUM</h6>
                     <h2 className="products-typography">PRODUCTS</h2>
                 </div>
-                <ProductList />
+                <ProductList addProductToCart={addProductToCart} />
                 <NavLink to="/products">
                     <div className="scarlet-button product-button">
                         Go to shop

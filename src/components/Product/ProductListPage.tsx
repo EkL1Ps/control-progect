@@ -2,9 +2,11 @@ import './ProductListPage.scss'
 import ProductListItemPage from './ProductListItemPage'
 import productsArray from '../../utils/productsArray'
 
-type Props = {}
+type Props = {
+    addProductToCart: (count: number, price: number) => void
+}
 
-const ProductListPage = (props: Props) => {
+const ProductListPage = ({ addProductToCart }: Props) => {
     return (
         <>
             <div className="selfPage-product-wrapper">
@@ -26,6 +28,7 @@ const ProductListPage = (props: Props) => {
                                 alt={alt}
                                 description={description}
                                 categories={categories}
+                                addProductToCart={addProductToCart}
                             />
                         </div>
                     )

@@ -16,7 +16,16 @@ type CartData = {
     totalCount: number
 }
 
+type ProductsInBasket = {
+    [id: number]: number
+}
+
 const App = () => {
+    const [productsInBasket, setProductsInBasket] = useState<ProductsInBasket>({
+        1: 2,
+        2: 3,
+    })
+
     const [cartData, setCartData] = useState<CartData>({
         totalPrice: 0,
         totalCount: 0,
@@ -33,14 +42,25 @@ const App = () => {
         <>
             <Header cartData={cartData} />
             <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/products" element={<Products />} />
+                <Route
+                    path="/"
+                    element={<Main addProductToCart={addProductToCart} />}
+                />
+                <Route
+                    path="/products"
+                    element={<Products addProductToCart={addProductToCart} />}
+                />
                 <Route path="/inspirations" element={<Inspirations />} />
                 <Route path="/aboutUsPage" element={<AboutUsPage />} />
                 <Route path="/contactsPage" element={<ContactsPage />} />
                 <Route path="/wishList" element={<WishList />} />
                 <Route path="/basketPage" element={<BasketPage />} />
-                <Route path="/productListPage" element={<ProductListPage />} />
+                <Route
+                    path="/productListPage"
+                    element={
+                        <ProductListPage addProductToCart={addProductToCart} />
+                    }
+                />
             </Routes>
             <Footer />
         </>

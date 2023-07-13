@@ -1,17 +1,36 @@
 import './Quantity.scss'
 
-type Props = {}
-const Quantity = (props: Props) => {
+type Props = {
+    count: number
+    onDecrementClick: () => void
+    onIncrementClick: () => void
+    minCount: number
+}
+const Quantity = ({
+    count,
+    onDecrementClick,
+    onIncrementClick,
+    minCount,
+}: Props) => {
     return (
         <>
             <div className="row">
                 <div className="quantity">
-                    <button className="decrement-button">-</button>
-                    <input type="text" value={1} />
-                    <button className="increment-button">+</button>
-                </div>
-                <div className="add-to-cart-btn">
-                    <button>Add to cart</button>
+                    <button
+                        className="decrement-button"
+                        onClick={() => onDecrementClick()}
+                        disabled={count <= minCount}
+                    >
+                        -
+                    </button>
+                    <input type="text" value={count} readOnly />
+                    <button
+                        className="increment-button"
+                        onClick={() => onIncrementClick()}
+                        disabled={count >= 10}
+                    >
+                        +
+                    </button>
                 </div>
             </div>
         </>

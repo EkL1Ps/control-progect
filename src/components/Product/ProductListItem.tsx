@@ -5,9 +5,16 @@ type Props = {
     price: number
     image: string
     alt: string
+    addProductToCart: (count: number, price: number) => void
 }
 
-const ProductListItem = ({ title, price, image, alt }: Props) => {
+const ProductListItem = ({
+    title,
+    price,
+    image,
+    alt,
+    addProductToCart,
+}: Props) => {
     return (
         <>
             <NavLink to={'/productListPage'} className="card-content">

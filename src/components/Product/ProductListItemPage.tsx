@@ -6,6 +6,7 @@ import FreeRuturnImg from './images/days-free-return.svg'
 import EasyPaymentImg from './images/easy-payment.svg'
 import HoursDeliveryImg from './images/hours-delivery.svg'
 import SelfPageWoman from './images/woman-self-page.webp'
+import { useState } from 'react'
 
 type Props = {
     title: string
@@ -14,6 +15,7 @@ type Props = {
     image: string
     alt: string
     categories: string
+    addProductToCart: (count: number, price: number) => void
 }
 
 const ProductListItemPage = ({
@@ -23,7 +25,16 @@ const ProductListItemPage = ({
     image,
     alt,
     categories,
+    addProductToCart,
 }: Props) => {
+    const [count, setCount] = useState<number>(0)
+
+    const onIncrementClick = () => {
+        setCount((prevState) => prevState + 1)
+    }
+    const onDecrementClick = () => {
+        setCount((prevState) => prevState - 1)
+    }
     return (
         <>
             <div className="selfPage-product-list-item-wrapper">
@@ -37,13 +48,26 @@ const ProductListItemPage = ({
                             Price: {price}$
                         </p>
                         <p className="selfPage-product-description">
-                            {/* Amet ipsum, enim massa enim mattis pulvinar. Pretium
-                            sem a, sed lacus ac. Mattis sapien nunc malesuada
-                            tincidunt. Libero integer velit, lorem est. Velit
-                            adipiscing scelerisque eget nunc */}
                             {description}
                         </p>
-                        <Quantity />
+                        <div className="row">
+                            <Quantity
+                                count={count}
+                                onIncrementClick={onIncrementClick}
+                                onDecrementClick={onDecrementClick}
+                                minCount={1}
+                            />
+                            <div className="add-to-cart-btn">
+                                <button
+                                    onClick={() =>
+                                        addProductToCart(count, price)
+                                    }
+                                >
+                                    Add to cart
+                                </button>
+                            </div>
+                        </div>
+
                         <div className="possibilities">
                             <p>
                                 <img src={FreeRuturnImg} alt="image" />
