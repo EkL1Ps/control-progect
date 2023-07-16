@@ -4,7 +4,7 @@ import FilterIcon from './images/Filter-icon.svg'
 import productsArray from '../utils/productsArray'
 
 type Props = {
-    addProductToCart: (count: number, price: number) => void
+    addProductToCart: (id: number, count: number) => void
 }
 const Products = ({ addProductToCart }: Props) => {
     return (

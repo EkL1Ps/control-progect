@@ -82,12 +82,13 @@
     margin-left: auto;
     margin: 0 20px 0 auto;
 
-    p {
+    div {
         float: left;
         list-style-type: none;
         margin: 15px 10px;
+        display: inline;
 
-        div {
+        p {
             line-height: 30px;
             font-size: 18px;
 

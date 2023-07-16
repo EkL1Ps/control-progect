@@ -11,36 +11,29 @@ import BasketPage from '../BasketPage/BasketPage'
 import ProductListPage from '../components/Product/ProductListPage'
 import { useState } from 'react'
 
-type CartData = {
-    totalPrice: number
-    totalCount: number
-}
-
-type ProductsInBasket = {
+type ProductsInCart = {
     [id: number]: number
 }
 
 const App = () => {
-    const [productsInBasket, setProductsInBasket] = useState<ProductsInBasket>({
-        1: 2,
-        2: 3,
-    })
+    const [productsInCart, setProductInCart] = useState<ProductsInCart>({})
 
-    const [cartData, setCartData] = useState<CartData>({
-        totalPrice: 0,
-        totalCount: 0,
-    })
-
-    const addProductToCart = (count: number, price: number) => {
-        setCartData((prevState) => ({
-            totalCount: prevState.totalCount + count,
-            totalPrice: prevState.totalPrice + count * price,
+    const addProductToCart = (id: number, count: number) => {
+        setProductInCart((prevState) => ({
+            ...prevState,
+            [id]: (prevState[id] || 0) + count,
         }))
     }
+    // const addProductToCart = (count: number, price: number) => {
+    //     setCartData((prevState) => ({
+    //         totalCount: prevState.totalCount + count,
+    //         totalPrice: prevState.totalPrice + count * price,
+    //     }))
+    // }
 
     return (
         <>
-            <Header cartData={cartData} />
+            <Header productsInCart={productsInCart} />
             <Routes>
                 <Route
                     path="/"

@@ -3,7 +3,7 @@ import ProductListItemPage from './ProductListItemPage'
 import productsArray from '../../utils/productsArray'
 
 type Props = {
-    addProductToCart: (count: number, price: number) => void
+    addProductToCart: (id: number, count: number) => void
 }
 
 const ProductListPage = ({ addProductToCart }: Props) => {
@@ -22,13 +22,14 @@ const ProductListPage = ({ addProductToCart }: Props) => {
                     }) => (
                         <div className="productListItemPage" key={id}>
                             <ProductListItemPage
+                                addProductToCart={addProductToCart}
+                                id={id}
                                 title={title}
                                 price={price}
                                 image={image}
                                 alt={alt}
                                 description={description}
                                 categories={categories}
-                                addProductToCart={addProductToCart}
                             />
                         </div>
                     )

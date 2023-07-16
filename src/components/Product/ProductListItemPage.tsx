@@ -9,16 +9,18 @@ import SelfPageWoman from './images/woman-self-page.webp'
 import { useState } from 'react'
 
 type Props = {
+    id: number
     title: string
     price: number
     description: string
     image: string
     alt: string
     categories: string
-    addProductToCart: (count: number, price: number) => void
+    addProductToCart: (id: number, count: number) => void
 }
 
 const ProductListItemPage = ({
+    id,
     title,
     price,
     description,
@@ -59,9 +61,7 @@ const ProductListItemPage = ({
                             />
                             <div className="add-to-cart-btn">
                                 <button
-                                    onClick={() =>
-                                        addProductToCart(count, price)
-                                    }
+                                    onClick={() => addProductToCart(id, count)}
                                 >
                                     Add to cart
                                 </button>
