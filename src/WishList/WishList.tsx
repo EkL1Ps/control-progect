@@ -1,3 +1,5 @@
+import CartTotal from '../components/CartTotal/CartTotal'
+
 type Props = {}
 const WishList = (props: Props) => {
     return (
