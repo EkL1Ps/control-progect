@@ -24,12 +24,14 @@ const App = () => {
             [id]: (prevState[id] || 0) + count,
         }))
     }
-    // const addProductToCart = (count: number, price: number) => {
-    //     setCartData((prevState) => ({
-    //         totalCount: prevState.totalCount + count,
-    //         totalPrice: prevState.totalPrice + count * price,
-    //     }))
-    // }
+
+    const removeProductFromCart = (id: number) => {
+        setProductInCart((prevState) => {
+            let prevProductInCart = { ...prevState }
+            delete prevProductInCart[id]
+            return prevProductInCart
+        })
+    }
 
     return (
         <>
