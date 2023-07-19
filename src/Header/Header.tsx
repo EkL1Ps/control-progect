@@ -72,17 +72,7 @@ const Header = ({
                             <p>
                                 <NavLink to={'/basketPage'}>
                                     <img src={HeaderBag} alt="basket" />
-                                    {/* {Object.keys(productsInCart).map(
-                                        (productId) => (
-                                            <span className="quantity-in-basket">
-                                                {
-                                                    productsInCart[
-                                                        parseInt(productId)
-                                                    ]
-                                                }
-                                            </span>
-                                        )
-                                    )} */}
+
                                     <span className="quantity-in-basket">
                                         {''}
                                         {Object.keys(productsInCart).reduce(

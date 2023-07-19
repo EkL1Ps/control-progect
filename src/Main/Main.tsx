@@ -1,5 +1,5 @@
 import './Main.scss'
-import ProductList from '../components/Product/ProductList'
+import ProductListItem from '../components/Product/ProductListItem'
 import HerbLogo from './main-image/herb-logo.svg'
 import Bracelets from './main-image/Bracelets.svg'
 import Earrlings from './main-image/Earrlings.svg'
@@ -58,59 +58,71 @@ const Main = ({ addProductToCart }: Props) => {
                     <p>3000</p>
                     <p>Exclusive products</p>
                 </div>
+
                 <div className="categories">
-                    <div className="col-6 categories-block">
-                        <div className="categories-block-hover">
-                            <p className="categories-image">
-                                <img src={Earrlings} alt="Earrlings" />
-                            </p>
-                            <p>Earrings</p>
+                    <NavLink to="/productEarrings">
+                        <div className="col-6 categories-block">
+                            <div className="categories-block-hover">
+                                <p className="categories-image">
+                                    <img src={Earrlings} alt="Earrlings" />
+                                </p>
+                                <p>Earrings</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-6 categories-block">
-                        <div className="categories-block-hover">
-                            <p className="categories-image">
-                                <img src={Tiaras} alt="Tiaras" />
-                            </p>
-                            <p>Tiaras</p>
-                        </div>
-                    </div>
+                    </NavLink>
 
-                    <div className="col-6 categories-block">
-                        <div className="categories-block-hover">
-                            <p className="categories-image">
-                                <img src={Rings} alt="Rings" />
-                            </p>
-                            <p>Rings</p>
+                    <NavLink to="/productsTiaras">
+                        <div className="col-6 categories-block">
+                            <div className="categories-block-hover">
+                                <p className="categories-image">
+                                    <img src={Tiaras} alt="Tiaras" />
+                                </p>
+                                <p>Tiaras</p>
+                            </div>
                         </div>
-                    </div>
+                    </NavLink>
 
-                    <div className="col-6 categories-block">
-                        <div className="categories-block-hover">
-                            <p className="categories-image">
-                                <img src={Watches} alt="Watches" />
-                            </p>
-                            <p>Watches</p>
-                        </div>
-                    </div>
+                    <NavLink to="/productRings">
+                        <div className="col-6 categories-block">
+                            <div className="categories-block-hover">
+                                <p className="categories-image">
+                                    <img src={Rings} alt="Rings" />
+                                </p>
 
-                    <div className="col-6 categories-block">
-                        <div className="categories-block-hover">
-                            <p className="categories-image">
-                                <img src={Necklaces} alt="Necklaces" />
-                            </p>
-                            <p>Necklaces</p>
+                                <p>Rings</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="col-6 categories-block">
-                        <div className="categories-block-hover">
-                            <p className="categories-image">
-                                <img src={Bracelets} alt="Bracelets" />
-                            </p>
-                            <p>Bracelets</p>
+                    </NavLink>
+                    <NavLink to="/productsWatches">
+                        <div className="col-6 categories-block">
+                            <div className="categories-block-hover">
+                                <p className="categories-image">
+                                    <img src={Watches} alt="Watches" />
+                                </p>
+                                <p>Watches</p>
+                            </div>
                         </div>
-                    </div>
+                    </NavLink>
+                    <NavLink to="/productsNecklace">
+                        <div className="col-6 categories-block">
+                            <div className="categories-block-hover">
+                                <p className="categories-image">
+                                    <img src={Necklaces} alt="Necklaces" />
+                                </p>
+                                <p>Necklaces</p>
+                            </div>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/productsBracelets">
+                        <div className="col-6 categories-block">
+                            <div className="categories-block-hover">
+                                <p className="categories-image">
+                                    <img src={Bracelets} alt="Bracelets" />
+                                </p>
+                                <p>Bracelets</p>
+                            </div>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
             <div className="main-under-products-img">
@@ -145,7 +157,22 @@ const Main = ({ addProductToCart }: Props) => {
                     <h6 className="vestibulum">VESTIBULUM</h6>
                     <h2 className="products-typography">PRODUCTS</h2>
                 </div>
-                <ProductList addProductToCart={addProductToCart} />
+                {/* <ProductList addProductToCart={addProductToCart} /> */}
+                <div className="row main-card">
+                    {productsArray
+                        .filter((item) => item.location === 'main')
+                        .map(({ id, title, price, image, alt }) => (
+                            <div className="col-3 product-card" key={id}>
+                                <ProductListItem
+                                    addProductToCart={addProductToCart}
+                                    title={title}
+                                    price={price}
+                                    image={image}
+                                    alt={alt}
+                                />
+                            </div>
+                        ))}
+                </div>
                 <NavLink to="/products">
                     <div className="scarlet-button product-button">
                         Go to shop

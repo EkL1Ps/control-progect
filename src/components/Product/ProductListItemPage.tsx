@@ -15,7 +15,7 @@ type Props = {
     description: string
     image: string
     alt: string
-    categories: string
+    categories?: string
     addProductToCart: (id: number, count: number) => void
 }
 

@@ -12,6 +12,12 @@ import ProductListPage from '../components/Product/ProductListPage'
 import { useState } from 'react'
 import { createContext } from 'react'
 import { omit } from 'lodash'
+import ProductsRings from '../Products/ProductsCatagories/ProductsRings'
+import ProductsEarrings from '../Products/ProductsCatagories/ProductsEarrings'
+import ProductsNecklace from '../Products/ProductsCatagories/ProductsNecklace'
+import ProductsTiaras from '../Products/ProductsCatagories/ProductsTiaras'
+import ProductsBracelets from '../Products/ProductsCatagories/ProductsBracelets'
+import ProductsWatches from '../Products/ProductsCatagories/ProductsWatches'
 
 type ProductsInCart = {
     [id: number]: number
@@ -19,6 +25,7 @@ type ProductsInCart = {
 
 type Context = {
     removeProductFromCart: (id: number) => void
+    changeProductQuantity: (id: number, count: number) => void
 }
 
 export const AppContext = createContext<Context | null>(null)
@@ -37,10 +44,20 @@ const App = () => {
         setProductInCart((prevState) => omit(prevState, id))
     }
 
+    const changeProductQuantity = (id: number, count: number) => {
+        setProductInCart((prevState) => ({
+            ...prevState,
+            [id]: count,
+        }))
+    }
+
     return (
         <>
             <AppContext.Provider
-                value={{ removeProductFromCart: removeProductFromCart }}
+                value={{
+                    removeProductFromCart: removeProductFromCart,
+                    changeProductQuantity: changeProductQuantity,
+                }}
             >
                 <Header productsInCart={productsInCart} />
                 <Routes>
@@ -66,6 +83,54 @@ const App = () => {
                         path="/productListPage"
                         element={
                             <ProductListPage
+                                addProductToCart={addProductToCart}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/productRings"
+                        element={
+                            <ProductsRings
+                                addProductToCart={addProductToCart}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/productEarrings"
+                        element={
+                            <ProductsEarrings
+                                addProductToCart={addProductToCart}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/productsNecklace"
+                        element={
+                            <ProductsNecklace
+                                addProductToCart={addProductToCart}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/productsTiaras"
+                        element={
+                            <ProductsTiaras
+                                addProductToCart={addProductToCart}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/productsBracelets"
+                        element={
+                            <ProductsBracelets
+                                addProductToCart={addProductToCart}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/productsWatches"
+                        element={
+                            <ProductsWatches
                                 addProductToCart={addProductToCart}
                             />
                         }
