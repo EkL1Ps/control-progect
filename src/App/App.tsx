@@ -11,6 +11,7 @@ import BasketPage from '../BasketPage/BasketPage'
 import ProductListPage from '../components/Product/ProductListPage'
 import { useState } from 'react'
 import { createContext } from 'react'
+import { omit } from 'lodash'
 
 type ProductsInCart = {
     [id: number]: number
@@ -33,11 +34,7 @@ const App = () => {
     }
 
     const removeProductFromCart = (id: number) => {
-        setProductInCart((prevState) => {
-            let prevProductInCart = { ...prevState }
-            delete prevProductInCart[id]
-            return prevProductInCart
-        })
+        setProductInCart((prevState) => omit(prevState, id))
     }
 
     return (
