@@ -1,0 +1,26 @@
+.removeProductFromCart-btn {
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background-color: white;
+    border-radius: 100%;
+    transition: 0.3s;
+    position: absolute;
+    margin: 0 0 0 250px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #b66253;
+        padding: 5px;
+    }
+    &::after {
+        content: attr(Delete);
+        color: white;
+        background-color: grey;
+    }
+
+    img {
+        width: 70%;
+        height: 70%;
+    }
+}
