@@ -30,4 +30,26 @@
         height: 18px;
         margin-right: 5px;
     }
+    div {
+        &:hover ul {
+            display: initial;
+        }
+    }
+}
+.filter-categories {
+    display: none;
+    position: absolute;
+    margin-left: 23px;
+
+    li {
+        color: #626262;
+        list-style-type: none;
+        font-family: Jost;
+        margin-top: 5px;
+        font-size: 18px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

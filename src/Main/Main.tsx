@@ -157,7 +157,6 @@ const Main = ({ addProductToCart }: Props) => {
                     <h6 className="vestibulum">VESTIBULUM</h6>
                     <h2 className="products-typography">PRODUCTS</h2>
                 </div>
-                {/* <ProductList addProductToCart={addProductToCart} /> */}
                 <div className="row main-card">
                     {productsArray
                         .filter((item) => item.location === 'main')

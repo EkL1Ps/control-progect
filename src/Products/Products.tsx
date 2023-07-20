@@ -1,7 +1,7 @@
 import './Products.scss'
 import ProductList from '../components/Product/ProductList'
-import FilterIcon from './images/Filter-icon.svg'
 import productsArray from '../utils/productsArray'
+import ProductPageFilter from '../components/ProductPageFilter/ProductPageFilter'
 
 type Props = {
     addProductToCart: (id: number, count: number) => void
@@ -15,12 +15,7 @@ const Products = ({ addProductToCart }: Props) => {
             </div>
             <div className="products-container">
                 <div className="product-list-container">
-                    <div className="filter-tools">
-                        <a href="#">
-                            <img src={FilterIcon} alt="filter-icon" />
-                            Filters
-                        </a>
-                    </div>
+                    <ProductPageFilter />
                     <ProductList addProductToCart={addProductToCart} />
                 </div>
             </div>

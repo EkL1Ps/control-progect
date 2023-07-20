@@ -1,28 +1,23 @@
 import productsArray from '../../utils/productsArray'
 import ProductListItem from '../../components/Product/ProductListItem'
-import FilterIcon from '../images/Filter-icon.svg'
+import ProductPageFilter from '../../components/ProductPageFilter/ProductPageFilter'
 
 type Props = {
     addProductToCart: (id: number, count: number) => void
 }
-const ProductsTiaras = ({ addProductToCart }: Props) => {
+const ProductsNecklace = ({ addProductToCart }: Props) => {
     return (
         <>
             <div className="products-title">
                 <div className="vestibulum">BEJEWELERY</div>
-                <div className="title-h1">TIARAS</div>
+                <div className="title-h1">NECKLACES</div>
             </div>
             <div className="products-container">
                 <div className="product-list-container">
-                    <div className="filter-tools">
-                        <a href="#">
-                            <img src={FilterIcon} alt="filter-icon" />
-                            Filters
-                        </a>
-                    </div>
+                    <ProductPageFilter />
                     <div className="row main-card">
                         {productsArray
-                            .filter((item) => item.categories === 'crown')
+                            .filter((item) => item.categories === 'necklace')
                             .map(({ id, title, price, image, alt }) => (
                                 <div className="col-3 product-card" key={id}>
                                     <ProductListItem
@@ -40,4 +35,4 @@ const ProductsTiaras = ({ addProductToCart }: Props) => {
         </>
     )
 }
-export default ProductsTiaras
+export default ProductsNecklace

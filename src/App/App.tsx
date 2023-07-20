@@ -12,12 +12,12 @@ import ProductListPage from '../components/Product/ProductListPage'
 import { useState } from 'react'
 import { createContext } from 'react'
 import { omit } from 'lodash'
-import ProductsRings from '../Products/ProductsCatagories/ProductsRings'
-import ProductsEarrings from '../Products/ProductsCatagories/ProductsEarrings'
-import ProductsNecklace from '../Products/ProductsCatagories/ProductsNecklace'
-import ProductsTiaras from '../Products/ProductsCatagories/ProductsTiaras'
-import ProductsBracelets from '../Products/ProductsCatagories/ProductsBracelets'
-import ProductsWatches from '../Products/ProductsCatagories/ProductsWatches'
+import ProductsRings from '../Products/ProductsCategories/ProductsRings'
+import ProductsEarrings from '../Products/ProductsCategories/ProductsEarrings'
+import ProductsNecklace from '../Products/ProductsCategories/ProductsNecklace'
+import ProductsTiaras from '../Products/ProductsCategories/ProductsTiaras'
+import ProductsBracelets from '../Products/ProductsCategories/ProductsBracelets'
+import ProductsWatches from '../Products/ProductsCategories/ProductsWatches'
 
 type ProductsInCart = {
     [id: number]: number
