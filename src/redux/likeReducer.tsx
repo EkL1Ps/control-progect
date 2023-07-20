@@ -11,7 +11,7 @@ export const likeReducer = (state = initialState, action: AnyAction) => {
         case 'TOGGLE_LIKE': {
             return {
                 ...state,
-                [action.id]: !state[action.id],
+                [action.id]: !state[action.Id],
             }
         }
         default:

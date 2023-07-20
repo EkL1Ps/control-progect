@@ -163,6 +163,7 @@ const Main = ({ addProductToCart }: Props) => {
                         .map(({ id, title, price, image, alt }) => (
                             <div className="col-3 product-card" key={id}>
                                 <ProductListItem
+                                    id={id}
                                     addProductToCart={addProductToCart}
                                     title={title}
                                     price={price}

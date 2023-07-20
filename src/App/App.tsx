@@ -18,6 +18,7 @@ import ProductsNecklace from '../Products/ProductsCategories/ProductsNecklace'
 import ProductsTiaras from '../Products/ProductsCategories/ProductsTiaras'
 import ProductsBracelets from '../Products/ProductsCategories/ProductsBracelets'
 import ProductsWatches from '../Products/ProductsCategories/ProductsWatches'
+import ProductsPage from '../ProductsPage/ProductsPage'
 
 type ProductsInCart = {
     [id: number]: number
@@ -133,6 +134,12 @@ const App = () => {
                             <ProductsWatches
                                 addProductToCart={addProductToCart}
                             />
+                        }
+                    />
+                    <Route
+                        path="productsPage/:pageId"
+                        element={
+                            <ProductsPage addProductToCart={addProductToCart} />
                         }
                     />
                 </Routes>

@@ -1,6 +1,7 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 type Props = {
+    id: number
     title: string
     price: number
     image: string
@@ -9,6 +10,7 @@ type Props = {
 }
 
 const ProductListItem = ({
+    id,
     title,
     price,
     image,
@@ -17,11 +19,11 @@ const ProductListItem = ({
 }: Props) => {
     return (
         <>
-            <NavLink to={'/productListPage'} className="card-content">
+            <Link to={`/productsPage/${id}`} className="card-content">
                 <img src={image} alt={alt} />
                 <h5 className="product-title">{title}</h5>
                 <div className="price">${price}</div>
-            </NavLink>
+            </Link>
         </>
     )
 }

@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom'
 import productsArray, {
     Product,
     getProductObject,
@@ -16,6 +17,8 @@ const CartTotal = ({
     productsInCart,
     productsObject = getProductObject(productsArray),
 }: Props) => {
+    const { pageId } = useParams()
+
     return (
         <>
             ${' '}
@@ -23,7 +26,9 @@ const CartTotal = ({
                 (total, productId) =>
                     total +
                     productsInCart[parseInt(productId)] *
-                        productsObject[parseInt(productId)].price,
+                        productsObject[parseInt(productId)].productsObject![
+                            parseInt(pageId!)
+                        ].price,
                 0
             )}
             .00

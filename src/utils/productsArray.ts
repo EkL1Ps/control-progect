@@ -7,6 +7,9 @@ export type Product = {
     description: string
     categories?: string
     location?: string
+    productsObject?: {
+        [id:number]: Product
+    }
 }
 
 const productsArray: Product[] = [

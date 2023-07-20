@@ -1,37 +1,32 @@
-import './ProductListItemPage.scss'
-import productsArray from '../../utils/productsArray'
-import SilverRing from '../Product/Silver-ring.webp'
-import Quantity from '../Quantity/Quantity'
-import FreeRuturnImg from './images/days-free-return.svg'
-import EasyPaymentImg from './images/easy-payment.svg'
-import HoursDeliveryImg from './images/hours-delivery.svg'
-import SelfPageWoman from './images/woman-self-page.webp'
+import { useParams } from 'react-router-dom'
+import productsArray, {
+    Product,
+    getProductObject,
+} from '../utils/productsArray'
+import Quantity from '../components/Quantity/Quantity'
 import { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import isLikedBtn from './images/IsLikedBtn.svg'
-import isNotLikedBtn from './images/isNotLikedBtn.svg'
+import { useAppDispatch, useAppSelector } from '../redux/hooks'
+import isLikedBtn from './image/IsLikedBtn.svg'
+import isNotLikedBtn from './image/isNotLikedBtn.svg'
+import FreeRuturnImg from './image/days-free-return.svg'
+import EasyPaymentImg from './image/easy-payment.svg'
+import HoursDeliveryImg from './image/hours-delivery.svg'
+import SelfPageWoman from './image/woman-self-page.webp'
 
 type Props = {
-    id: number
-    title: string
-    price: number
-    description: string
-    image: string
-    alt: string
-    categories?: string
+    id?: number
+    productsObject?: {
+        [id: number]: Product
+    }
     addProductToCart: (id: number, count: number) => void
 }
-
-const ProductListItemPage = ({
+const ProductsPage = ({
     id,
-    title,
-    price,
-    description,
-    image,
-    alt,
-    categories,
+    productsObject = getProductObject(productsArray),
     addProductToCart,
 }: Props) => {
+    const { pageId } = useParams()
+
     const [count, setCount] = useState<number>(0)
 
     const onIncrementClick = () => {
@@ -40,8 +35,7 @@ const ProductListItemPage = ({
     const onDecrementClick = () => {
         setCount((prevState) => prevState - 1)
     }
-
-    const isLiked = useAppSelector((state) => state.productsLikeState[id])
+    const isLiked = useAppSelector((state) => state.productsLikeState[id!])
     const dispatch = useAppDispatch()
 
     return (
@@ -49,15 +43,20 @@ const ProductListItemPage = ({
             <div className="selfPage-product-list-item-wrapper">
                 <div className="row">
                     <div className="col-2 selfPage-product-image">
-                        <img src={image} alt={alt} />
+                        <img
+                            src={productsObject[parseInt(pageId!)].image}
+                            alt={productsObject[parseInt(pageId!)].alt}
+                        />
                     </div>
                     <div className="product-list-item-data">
-                        <h2 className="selfPage-product-title">{title}</h2>
+                        <h2 className="selfPage-product-title">
+                            {productsObject[parseInt(pageId!)].title}
+                        </h2>
                         <p className="selfPage-product-price">
-                            Price: {price}$
+                            Price: {productsObject[parseInt(pageId!)].price}$
                         </p>
                         <p className="selfPage-product-description">
-                            {description}
+                            {productsObject[parseInt(pageId!)].description}
                         </p>
                         <div className="row">
                             <Quantity
@@ -68,7 +67,7 @@ const ProductListItemPage = ({
                             />
                             <div className="add-to-cart-btn">
                                 <button
-                                    onClick={() => addProductToCart(id, count)}
+                                    onClick={() => addProductToCart(id!, count)}
                                 >
                                     Add to cart
                                 </button>
@@ -151,7 +150,10 @@ const ProductListItemPage = ({
                             </div>
                         </div>
                         <p className="self-page-categories">
-                            Categories: <span>{categories}</span>
+                            Categories:{' '}
+                            <span>
+                                {productsObject[parseInt(pageId!)].categories}
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -159,5 +161,4 @@ const ProductListItemPage = ({
         </>
     )
 }
-
-export default ProductListItemPage
+export default ProductsPage

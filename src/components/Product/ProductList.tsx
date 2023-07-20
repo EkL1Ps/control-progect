@@ -15,6 +15,7 @@ const ProductList = ({ addProductToCart }: Props) => {
                     <div className="col-3 product-card" key={id}>
                         <ProductListItem
                             addProductToCart={addProductToCart}
+                            id={id}
                             title={title}
                             price={price}
                             image={image}
