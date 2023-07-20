@@ -7,6 +7,13 @@ import EasyPaymentImg from './images/easy-payment.svg'
 import HoursDeliveryImg from './images/hours-delivery.svg'
 import SelfPageWoman from './images/woman-self-page.webp'
 import { useState } from 'react'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+// import FavoriteIcon from '@mui/icons-material/Favorite'
+import { Button } from '@mui/material'
+import styled from '@emotion/styled'
+import isLikedBtn from './images/IsLikedBtn.svg'
+import isNotLikedBtn from './images/isNotLikedBtn.svg'
 
 type Props = {
     id: number
@@ -37,6 +44,16 @@ const ProductListItemPage = ({
     const onDecrementClick = () => {
         setCount((prevState) => prevState - 1)
     }
+
+    const isLiked = useAppSelector((state) => state.productsLikeState[id])
+    const dispatch = useAppDispatch()
+
+    const LikeBtn = styled(Button)({
+        width: '30px',
+        height: '30px',
+        display: 'blick',
+    })
+
     return (
         <>
             <div className="selfPage-product-list-item-wrapper">
@@ -66,6 +83,31 @@ const ProductListItemPage = ({
                                     Add to cart
                                 </button>
                             </div>
+                            {/* <LikeBtn className="likeBtn">
+                                {isLiked ? (
+                                    <FavoriteIcon />
+                                ) : (
+                                    <FavoriteBorderIcon />
+                                )}
+                            </LikeBtn> */}
+                            <button
+                                className="LikeBtn"
+                                onClick={() =>
+                                    dispatch({
+                                        type: 'TOGGLE_LIKE',
+                                        id,
+                                    })
+                                }
+                            >
+                                {isLiked ? (
+                                    <img src={isLikedBtn} alt="isLikedBtn" />
+                                ) : (
+                                    <img
+                                        src={isNotLikedBtn}
+                                        alt="isNotLikedBtn"
+                                    />
+                                )}
+                            </button>
                         </div>
 
                         <div className="possibilities">
