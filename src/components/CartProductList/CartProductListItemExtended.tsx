@@ -30,9 +30,14 @@ const CartProductListItemExtended = ({ product, productCount }: Props) => {
                     data?.changeProductQuantity(product.id, productCount + 1)
                 }
                 onDecrementClick={() =>
-                    data?.changeProductQuantity(product.id, productCount - 1)
+                    productCount === 1
+                        ? data?.removeProductFromCart(product.id)
+                        : data?.changeProductQuantity(
+                              product.id,
+                              productCount - 1
+                          )
                 }
-                minCount={1}
+                minCount={0}
             />
         </>
     )

@@ -10,7 +10,7 @@ const Quantity = ({
     count,
     onDecrementClick,
     onIncrementClick,
-    minCount,
+    minCount = 1,
 }: Props) => {
     return (
         <>
