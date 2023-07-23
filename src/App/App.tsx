@@ -136,12 +136,7 @@ const App = () => {
                             />
                         }
                     />
-                    <Route
-                        path="productsPage/:pageId"
-                        element={
-                            <ProductsPage addProductToCart={addProductToCart} />
-                        }
-                    />
+                    <Route path="productsPage/:id" element={<ProductsPage />} />
                 </Routes>
                 <Footer />
             </AppContext.Provider>

@@ -1,5 +1,5 @@
 import './Products.scss'
-import ProductList from '../components/Product/ProductList'
+import ProductsPageList from './ProductsPageList'
 import productsArray from '../utils/productsArray'
 import ProductPageFilter from '../components/ProductPageFilter/ProductPageFilter'
 
@@ -16,7 +16,7 @@ const Products = ({ addProductToCart }: Props) => {
             <div className="products-container">
                 <div className="product-list-container">
                     <ProductPageFilter />
-                    <ProductList addProductToCart={addProductToCart} />
+                    <ProductsPageList addProductToCart={addProductToCart} />
                 </div>
             </div>
         </>

@@ -60,30 +60,30 @@ const Main = ({ addProductToCart }: Props) => {
                 </div>
 
                 <div className="categories">
-                    <NavLink to="/productEarrings">
-                        <div className="col-6 categories-block">
+                    <div className="col-6 categories-block">
+                        <NavLink to="/productEarrings">
                             <div className="categories-block-hover">
                                 <p className="categories-image">
                                     <img src={Earrlings} alt="Earrlings" />
                                 </p>
                                 <p>Earrings</p>
                             </div>
-                        </div>
-                    </NavLink>
+                        </NavLink>
+                    </div>
 
-                    <NavLink to="/productsTiaras">
-                        <div className="col-6 categories-block">
+                    <div className="col-6 categories-block">
+                        <NavLink to="/productsTiaras">
                             <div className="categories-block-hover">
                                 <p className="categories-image">
                                     <img src={Tiaras} alt="Tiaras" />
                                 </p>
                                 <p>Tiaras</p>
                             </div>
-                        </div>
-                    </NavLink>
+                        </NavLink>
+                    </div>
 
-                    <NavLink to="/productRings">
-                        <div className="col-6 categories-block">
+                    <div className="col-6 categories-block">
+                        <NavLink to="/productRings">
                             <div className="categories-block-hover">
                                 <p className="categories-image">
                                     <img src={Rings} alt="Rings" />
@@ -91,38 +91,38 @@ const Main = ({ addProductToCart }: Props) => {
 
                                 <p>Rings</p>
                             </div>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/productsWatches">
-                        <div className="col-6 categories-block">
+                        </NavLink>
+                    </div>
+                    <div className="col-6 categories-block">
+                        <NavLink to="/productsWatches">
                             <div className="categories-block-hover">
                                 <p className="categories-image">
                                     <img src={Watches} alt="Watches" />
                                 </p>
                                 <p>Watches</p>
                             </div>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/productsNecklace">
-                        <div className="col-6 categories-block">
+                        </NavLink>
+                    </div>
+                    <div className="col-6 categories-block">
+                        <NavLink to="/productsNecklace">
                             <div className="categories-block-hover">
                                 <p className="categories-image">
                                     <img src={Necklaces} alt="Necklaces" />
                                 </p>
                                 <p>Necklaces</p>
                             </div>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/productsBracelets">
-                        <div className="col-6 categories-block">
+                        </NavLink>
+                    </div>
+                    <div className="col-6 categories-block">
+                        <NavLink to="/productsBracelets">
                             <div className="categories-block-hover">
                                 <p className="categories-image">
                                     <img src={Bracelets} alt="Bracelets" />
                                 </p>
                                 <p>Bracelets</p>
                             </div>
-                        </div>
-                    </NavLink>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
             <div className="main-under-products-img">

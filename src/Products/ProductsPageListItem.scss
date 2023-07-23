@@ -1,0 +1,76 @@
+.card-content {
+    background-color: #f9f2ec;
+    padding: 20px;
+    margin: 0px 20px 20px;
+    display: block;
+
+    img {
+        font-size: 20px;
+        color: #4e4540;
+        font-weight: 400;
+        font-family: Jost;
+        line-height: 28px;
+        width: 100%;
+        height: 100%;
+    }
+}
+.product-title,
+.price {
+    font-size: 20px;
+    color: #4e4540;
+    font-weight: 400;
+    font-family: Jost;
+    line-height: 28px;
+}
+.price {
+    font-size: 16px;
+}
+.LikeBtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    margin: 56px 0 0 450px;
+    border-radius: 100%;
+    background-color: white;
+    border: 0;
+
+    img {
+        width: 70%;
+        height: 70%;
+    }
+}
+.more-info-btn {
+    display: inline;
+    font-size: 20px;
+    color: #4e4540;
+    font-weight: 400;
+    font-family: Jost;
+    line-height: 28px;
+
+    &:hover {
+        color: #bb5644;
+    }
+}
+.adapt-LikeBtn {
+    display: none;
+}
+@media ((min-width: 1440px) and (max-width: 1880px)) {
+    .adapt-LikeBtn {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        margin: 0 0 400px 22%;
+        border-radius: 100%;
+        background-color: white;
+        border: 0;
+        display: initial;
+
+        img {
+            width: 70%;
+            height: 70%;
+        }
+    }
+    .LikeBtn {
+        display: none;
+    }
+}

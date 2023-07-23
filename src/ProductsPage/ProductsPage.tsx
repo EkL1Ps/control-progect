@@ -1,42 +1,22 @@
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import productsArray, {
     Product,
     getProductObject,
 } from '../utils/productsArray'
-import Quantity from '../components/Quantity/Quantity'
-import { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../redux/hooks'
-import isLikedBtn from './image/IsLikedBtn.svg'
-import isNotLikedBtn from './image/isNotLikedBtn.svg'
 import FreeRuturnImg from './image/days-free-return.svg'
 import EasyPaymentImg from './image/easy-payment.svg'
 import HoursDeliveryImg from './image/hours-delivery.svg'
 import SelfPageWoman from './image/woman-self-page.webp'
 
 type Props = {
-    id?: number
     productsObject?: {
         [id: number]: Product
     }
-    addProductToCart: (id: number, count: number) => void
 }
 const ProductsPage = ({
-    id,
     productsObject = getProductObject(productsArray),
-    addProductToCart,
 }: Props) => {
-    const { pageId } = useParams()
-
-    const [count, setCount] = useState<number>(0)
-
-    const onIncrementClick = () => {
-        setCount((prevState) => prevState + 1)
-    }
-    const onDecrementClick = () => {
-        setCount((prevState) => prevState - 1)
-    }
-    const isLiked = useAppSelector((state) => state.productsLikeState[id!])
-    const dispatch = useAppDispatch()
+    const { id } = useParams()
 
     return (
         <>
@@ -44,54 +24,20 @@ const ProductsPage = ({
                 <div className="row">
                     <div className="col-2 selfPage-product-image">
                         <img
-                            src={productsObject[parseInt(pageId!)].image}
-                            alt={productsObject[parseInt(pageId!)].alt}
+                            src={productsObject[parseInt(id!)].image}
+                            alt={productsObject[parseInt(id!)].alt}
                         />
                     </div>
                     <div className="product-list-item-data">
                         <h2 className="selfPage-product-title">
-                            {productsObject[parseInt(pageId!)].title}
+                            {productsObject[parseInt(id!)].title}
                         </h2>
                         <p className="selfPage-product-price">
-                            Price: {productsObject[parseInt(pageId!)].price}$
+                            Price: {productsObject[parseInt(id!)].price}$
                         </p>
                         <p className="selfPage-product-description">
-                            {productsObject[parseInt(pageId!)].description}
+                            {productsObject[parseInt(id!)].description}
                         </p>
-                        <div className="row">
-                            <Quantity
-                                count={count}
-                                onIncrementClick={onIncrementClick}
-                                onDecrementClick={onDecrementClick}
-                                minCount={1}
-                            />
-                            <div className="add-to-cart-btn">
-                                <button
-                                    onClick={() => addProductToCart(id!, count)}
-                                >
-                                    Add to cart
-                                </button>
-                            </div>
-
-                            <button
-                                className="LikeBtn"
-                                onClick={() =>
-                                    dispatch({
-                                        type: 'TOGGLE_LIKE',
-                                        id,
-                                    })
-                                }
-                            >
-                                {isLiked ? (
-                                    <img src={isLikedBtn} alt="isLikedBtn" />
-                                ) : (
-                                    <img
-                                        src={isNotLikedBtn}
-                                        alt="isNotLikedBtn"
-                                    />
-                                )}
-                            </button>
-                        </div>
 
                         <div className="possibilities">
                             <p>
@@ -106,6 +52,14 @@ const ProductsPage = ({
                                 <img src={HoursDeliveryImg} alt="image" />
                                 24 hours delivery
                             </p>
+                        </div>
+                        <div className="liked-buy">
+                            Liked? Buy! <br />
+                            <NavLink to="/products">
+                                <button className="scarlet-button">
+                                    Products
+                                </button>
+                            </NavLink>
                         </div>
                         <div className="woman-self-page">
                             <img src={SelfPageWoman} alt="image" />
@@ -152,7 +106,7 @@ const ProductsPage = ({
                         <p className="self-page-categories">
                             Categories:{' '}
                             <span>
-                                {productsObject[parseInt(pageId!)].categories}
+                                {productsObject[parseInt(id!)].categories}
                             </span>
                         </p>
                     </div>

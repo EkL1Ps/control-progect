@@ -1,5 +1,5 @@
 import productsArray from '../../utils/productsArray'
-import ProductListItem from '../../components/Product/ProductListItem'
+import ProductsPageListItem from '../ProductsPageListItem'
 import ProductPageFilter from '../../components/ProductPageFilter/ProductPageFilter'
 
 type Props = {
@@ -20,7 +20,7 @@ const ProductsWatches = ({ addProductToCart }: Props) => {
                             .filter((item) => item.categories === 'watches')
                             .map(({ id, title, price, image, alt }) => (
                                 <div className="col-3 product-card" key={id}>
-                                    <ProductListItem
+                                    <ProductsPageListItem
                                         id={id}
                                         addProductToCart={addProductToCart}
                                         title={title}

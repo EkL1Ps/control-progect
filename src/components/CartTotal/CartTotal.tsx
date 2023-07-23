@@ -17,8 +17,6 @@ const CartTotal = ({
     productsInCart,
     productsObject = getProductObject(productsArray),
 }: Props) => {
-    const { pageId } = useParams()
-
     return (
         <>
             ${' '}
@@ -26,9 +24,7 @@ const CartTotal = ({
                 (total, productId) =>
                     total +
                     productsInCart[parseInt(productId)] *
-                        productsObject[parseInt(productId)].productsObject![
-                            parseInt(pageId!)
-                        ].price,
+                        productsObject[parseInt(productId)].price,
                 0
             )}
             .00

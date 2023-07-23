@@ -285,3 +285,22 @@
 .partners-title {
     margin-top: 100px;
 }
+.vestibulum {
+    margin-left: 86px;
+    font-family: Jost;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    &::before {
+        content: '';
+        display: block;
+        position: relative;
+        top: 10px;
+        border: 2px solid #bb5644;
+        width: 20px;
+        height: 0;
+        margin-right: 10px;
+    }
+}
