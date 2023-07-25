@@ -1,4 +1,3 @@
-import productsArray from '../utils/productsArray'
 import Quantity from '../components/Quantity/Quantity'
 import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../redux/hooks'
@@ -6,24 +5,19 @@ import isLikedBtn from './images/IsLikedBtn.svg'
 import isNotLikedBtn from './images/isNotLikedBtn.svg'
 import { Link } from 'react-router-dom'
 import './ProductsPageListItem.scss'
-
+import { toggleLike } from '../redux/likeReducer'
+import { addProductToCart } from '../redux/cartReducer'
+import './ProductsPageListItem.scss'
 type Props = {
     id: number
     title: string
     price: number
     image: string
     alt: string
-    addProductToCart: (id: number, count: number) => void
+    addProductToCart?: (id: number, count: number) => void
 }
 
-const ProductsPageListItem = ({
-    id,
-    title,
-    price,
-    image,
-    alt,
-    addProductToCart,
-}: Props) => {
+const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
     const [count, setCount] = useState<number>(0)
 
     const onIncrementClick = () => {
@@ -42,12 +36,7 @@ const ProductsPageListItem = ({
                 <div className="adapt-like-btn">
                     <button
                         className="adapt-LikeBtn"
-                        onClick={() =>
-                            dispatch({
-                                type: 'TOGGLE_LIKE',
-                                id,
-                            })
-                        }
+                        onClick={() => dispatch(toggleLike(id))}
                     >
                         {isLiked ? (
                             <img src={isLikedBtn} alt="isLikedBtn" />
@@ -71,7 +60,11 @@ const ProductsPageListItem = ({
                         minCount={1}
                     />
                     <div className="add-to-cart-btn">
-                        <button onClick={() => addProductToCart(id, count)}>
+                        <button
+                            onClick={() =>
+                                dispatch(addProductToCart({ id, count }))
+                            }
+                        >
                             Add to cart
                         </button>
                     </div>

@@ -3,10 +3,8 @@ import ProductsPageList from './ProductsPageList'
 import productsArray from '../utils/productsArray'
 import ProductPageFilter from '../components/ProductPageFilter/ProductPageFilter'
 
-type Props = {
-    addProductToCart: (id: number, count: number) => void
-}
-const Products = ({ addProductToCart }: Props) => {
+type Props = {}
+const Products = (props: Props) => {
     return (
         <>
             <div className="products-title">
@@ -16,7 +14,7 @@ const Products = ({ addProductToCart }: Props) => {
             <div className="products-container">
                 <div className="product-list-container">
                     <ProductPageFilter />
-                    <ProductsPageList addProductToCart={addProductToCart} />
+                    <ProductsPageList />
                 </div>
             </div>
         </>

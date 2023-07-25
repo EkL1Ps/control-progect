@@ -7,6 +7,7 @@ import FreeRuturnImg from './image/days-free-return.svg'
 import EasyPaymentImg from './image/easy-payment.svg'
 import HoursDeliveryImg from './image/hours-delivery.svg'
 import SelfPageWoman from './image/woman-self-page.webp'
+import './ProductsPage.scss'
 
 type Props = {
     productsObject?: {

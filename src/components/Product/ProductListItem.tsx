@@ -6,17 +6,9 @@ type Props = {
     price: number
     image: string
     alt: string
-    addProductToCart: (id: number, count: number) => void
 }
 
-const ProductListItem = ({
-    id,
-    title,
-    price,
-    image,
-    alt,
-    addProductToCart,
-}: Props) => {
+const ProductListItem = ({ id, title, price, image, alt }: Props) => {
     return (
         <>
             <Link to={`/productsPage/${id}`} className="card-content">

@@ -19,11 +19,9 @@ import { NavLink } from 'react-router-dom'
 import Since from '../Since/Since'
 import productsArray from '../utils/productsArray'
 
-type Props = {
-    addProductToCart: (id: number, count: number) => void
-}
+type Props = {}
 
-const Main = ({ addProductToCart }: Props) => {
+const Main = (props: Props) => {
     return (
         <>
             <div className="slider">slider</div>
@@ -164,7 +162,6 @@ const Main = ({ addProductToCart }: Props) => {
                             <div className="col-3 product-card" key={id}>
                                 <ProductListItem
                                     id={id}
-                                    addProductToCart={addProductToCart}
                                     title={title}
                                     price={price}
                                     image={image}
