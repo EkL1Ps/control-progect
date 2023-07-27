@@ -5,7 +5,7 @@ type wishListState = {
     [id: number]: number
 }
 
-const initialState: wishListState = {}
+const initialState: wishListState = {1: 2}
 
 export const wishListSlice = createSlice({
     name: 'addToFavorite',

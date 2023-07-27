@@ -1,4 +1,3 @@
-import React from 'react'
 import { Product } from '../../utils/productsArray'
 
 type Props = { product: Product; productCount: number }
