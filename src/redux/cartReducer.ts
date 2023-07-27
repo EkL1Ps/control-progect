@@ -1,14 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { initial, omit } from 'lodash'
+import { omit } from 'lodash'
 
 type State = {
     [id: number]: number
 }
 
-const initialState: State = {
-    1: 2,
-    2: 4,
-}
+const initialState: State = { 1: 2 }
 
 export const cartSlice = createSlice({
     name: 'cart',

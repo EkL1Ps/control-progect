@@ -8,13 +8,16 @@ import './ProductsPageListItem.scss'
 import { toggleLike } from '../redux/likeReducer'
 import { addProductToCart } from '../redux/cartReducer'
 import './ProductsPageListItem.scss'
+import {
+    addProductToFavorite,
+    removeProductFromFavorite,
+} from '../redux/wishListReducer'
 type Props = {
     id: number
     title: string
     price: number
     image: string
     alt: string
-    addProductToCart?: (id: number, count: number) => void
 }
 
 const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
@@ -36,7 +39,10 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
                 <div className="adapt-like-btn">
                     <button
                         className="adapt-LikeBtn"
-                        onClick={() => dispatch(toggleLike(id))}
+                        onClick={() => (
+                            dispatch(toggleLike(id)),
+                            dispatch(addProductToFavorite({ id, count }))
+                        )}
                     >
                         {isLiked ? (
                             <img src={isLikedBtn} alt="isLikedBtn" />
@@ -71,12 +77,10 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
 
                     <button
                         className="LikeBtn"
-                        onClick={() =>
-                            dispatch({
-                                type: 'TOGGLE_LIKE',
-                                id,
-                            })
-                        }
+                        onClick={() => (
+                            dispatch(toggleLike(id)),
+                            dispatch(addProductToFavorite({ id, count }))
+                        )}
                     >
                         {isLiked ? (
                             <img src={isLikedBtn} alt="isLikedBtn" />

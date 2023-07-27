@@ -1,24 +1,11 @@
-import { AnyAction } from 'redux'
 import { createSlice } from '@reduxjs/toolkit'
+import { omit } from 'lodash'
 
 type LikeState = {
     [id: number]: boolean
 }
 
 const initialState: LikeState = {}
-
-// export const likeReducer = (state = initialState, action: AnyAction) => {
-//     switch (action.type) {
-//         case 'TOGGLE_LIKE': {
-//             return {
-//                 ...state,
-//                 [action.id]: !state[action.id],
-//             }
-//         }
-//         default:
-//             return state
-//     }
-// }
 
 export const LikeSlice = createSlice({
     name: 'like',
@@ -28,6 +15,13 @@ export const LikeSlice = createSlice({
             ...state,
             [action.payload]: !state[action.payload],
         }),
+        // addProductToFavorite: (state, action) => ({
+        //     ...state,
+        //     [action.payload.id]:
+        //         (state[action.payload.id] || 0) + action.payload.count,
+        // }),
+        // removeProductFromFavorite: (state, action) =>
+        //     omit(state, action.payload),
     },
 })
 

@@ -9,14 +9,13 @@ import { NavLink } from 'react-router-dom'
 import CartTotal from '../components/CartTotal/CartTotal'
 import { useAppSelector } from '../redux/hooks'
 
-type Props = {
-    productsInCart?: {
-        [id: number]: number
-    }
-}
+type Props = {}
 
 const Header = (props: Props) => {
     const productsInCart = useAppSelector((state) => state.productsInCart)
+    const productsInFavorite = useAppSelector(
+        (state) => state.productsInFavorite
+    )
 
     return (
         <>
@@ -62,7 +61,17 @@ const Header = (props: Props) => {
                                     <NavLink to={'/wishList'}>
                                         <img src={HeaderLike} alt="like" />
                                         <span className="quantity-of-liked">
-                                            0
+                                            {''}
+                                            {Object.keys(
+                                                productsInFavorite
+                                            ).reduce(
+                                                (count, productId) =>
+                                                    count +
+                                                    productsInFavorite[
+                                                        parseInt(productId)
+                                                    ],
+                                                0
+                                            )}
                                         </span>
                                     </NavLink>
                                 </p>

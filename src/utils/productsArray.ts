@@ -7,9 +7,7 @@ export type Product = {
     description: string
     categories?: string
     location?: string
-    productsObject?: {
-        [id:number]: Product
-    }
+    favorite?: boolean
 }
 
 const productsArray: Product[] = [
@@ -22,7 +20,7 @@ const productsArray: Product[] = [
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'earrings',
-        location: "main",
+        location: 'main',
     },
     {
         id: 2,
@@ -43,8 +41,7 @@ const productsArray: Product[] = [
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'necklace',
-        location: "main",
-
+        location: 'main',
     },
     {
         id: 4,
@@ -65,8 +62,7 @@ const productsArray: Product[] = [
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'crown',
-        location: "main",
-
+        location: 'main',
     },
     {
         id: 6,
@@ -77,7 +73,7 @@ const productsArray: Product[] = [
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'earrings',
-        location: "main",
+        location: 'main',
     },
     {
         id: 7,
@@ -88,8 +84,7 @@ const productsArray: Product[] = [
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'bracelet',
-        location: "main",
-
+        location: 'main',
     },
     {
         id: 8,
@@ -110,8 +105,7 @@ const productsArray: Product[] = [
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'ring',
-        location: "main",
-
+        location: 'main',
     },
 ]
 
