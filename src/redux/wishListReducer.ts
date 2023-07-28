@@ -5,7 +5,7 @@ type wishListState = {
     [id: number]: number
 }
 
-const initialState: wishListState = {1: 2}
+const initialState: wishListState = {}
 
 export const wishListSlice = createSlice({
     name: 'addToFavorite',
@@ -14,10 +14,10 @@ export const wishListSlice = createSlice({
         addProductToFavorite: (state, action) => ({
             ...state,
             [action.payload.id]:
-                (state[action.payload.id] || 0) + action.payload.count,
+                (state[action.payload.id] || 0) + action.payload.status,
         }),
         removeProductFromFavorite: (state, action) =>
-            omit(state, action.payload),
+            omit(state, action.payload.id),
     },
 })
 

@@ -65,8 +65,8 @@ const Header = (props: Props) => {
                                             {Object.keys(
                                                 productsInFavorite
                                             ).reduce(
-                                                (count, productId) =>
-                                                    count +
+                                                (status, productId) =>
+                                                    status +
                                                     productsInFavorite[
                                                         parseInt(productId)
                                                     ],

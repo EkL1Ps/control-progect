@@ -22,6 +22,7 @@ type Props = {
 
 const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
     const [count, setCount] = useState<number>(0)
+    const [status, setStatus] = useState<number>(0)
 
     const onIncrementClick = () => {
         setCount((prevState) => prevState + 1)
@@ -33,16 +34,21 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
     const isLiked = useAppSelector((state) => state.productsLikeState[id])
     const dispatch = useAppDispatch()
 
+    const FavFunc = () => {
+        {
+            isLiked
+                ? dispatch(removeProductFromFavorite({ id, status }))
+                : dispatch(addProductToFavorite({ id, status }))
+        }
+    }
+
     return (
         <>
             <div className="card-content">
                 <div className="adapt-like-btn">
                     <button
                         className="adapt-LikeBtn"
-                        onClick={() => (
-                            dispatch(toggleLike(id)),
-                            dispatch(addProductToFavorite({ id, count }))
-                        )}
+                        onClick={() => (dispatch(toggleLike(id)), FavFunc())}
                     >
                         {isLiked ? (
                             <img src={isLikedBtn} alt="isLikedBtn" />
@@ -77,10 +83,7 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
 
                     <button
                         className="LikeBtn"
-                        onClick={() => (
-                            dispatch(toggleLike(id)),
-                            dispatch(addProductToFavorite({ id, count }))
-                        )}
+                        onClick={() => (dispatch(toggleLike(id)), FavFunc())}
                     >
                         {isLiked ? (
                             <img src={isLikedBtn} alt="isLikedBtn" />
