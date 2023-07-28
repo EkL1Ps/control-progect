@@ -33,7 +33,6 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
     }
 
     const isLiked = useAppSelector((state) => state.productsLikeState[id])
-    const likeCounter = useAppSelector((state) => state.likeCounter.likeCounter)
     const dispatch = useAppDispatch()
 
     const FavFunc = () => {

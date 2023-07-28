@@ -12,6 +12,9 @@ const ProductPageFilter = (props: Props) => {
                         Filters
                     </a>
                     <ul className="filter-categories">
+                        <NavLink to={'/products'}>
+                            <li>All</li>
+                        </NavLink>
                         <NavLink to="/productEarrings">
                             <li>Earrings</li>
                         </NavLink>
