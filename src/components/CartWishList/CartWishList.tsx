@@ -23,7 +23,7 @@ const CartWishList = ({
         <>
             {Object.keys(productsInFavorite).map((productId) => (
                 <div className="col-3 product-card">
-                    <div className="card-content">
+                    <div className="card-content" key={productId}>
                         <FavoriteCardItem
                             key={productId}
                             product={productsObject[parseInt(productId)]}

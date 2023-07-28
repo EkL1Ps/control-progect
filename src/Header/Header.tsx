@@ -16,6 +16,7 @@ const Header = (props: Props) => {
     const productsInFavorite = useAppSelector(
         (state) => state.productsInFavorite
     )
+    const likeCounter = useAppSelector((state) => state.likeCounter.likeCounter)
 
     return (
         <>
@@ -61,7 +62,7 @@ const Header = (props: Props) => {
                                     <NavLink to={'/wishList'}>
                                         <img src={HeaderLike} alt="like" />
                                         <span className="quantity-of-liked">
-                                            {''}
+                                            {/* {''}
                                             {Object.keys(
                                                 productsInFavorite
                                             ).reduce(
@@ -71,7 +72,8 @@ const Header = (props: Props) => {
                                                         parseInt(productId)
                                                     ],
                                                 0
-                                            )}
+                                            )} */}{' '}
+                                            {likeCounter}
                                         </span>
                                     </NavLink>
                                 </p>

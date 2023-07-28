@@ -12,6 +12,7 @@ import {
     addProductToFavorite,
     removeProductFromFavorite,
 } from '../redux/wishListReducer'
+import { likeDecrement, likeIncrement } from '../redux/likeCounterReducer'
 type Props = {
     id: number
     title: string
@@ -32,6 +33,7 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
     }
 
     const isLiked = useAppSelector((state) => state.productsLikeState[id])
+    const likeCounter = useAppSelector((state) => state.likeCounter.likeCounter)
     const dispatch = useAppDispatch()
 
     const FavFunc = () => {
@@ -39,6 +41,9 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
             isLiked
                 ? dispatch(removeProductFromFavorite({ id, status }))
                 : dispatch(addProductToFavorite({ id, status }))
+        }
+        {
+            isLiked ? dispatch(likeDecrement()) : dispatch(likeIncrement())
         }
     }
 
