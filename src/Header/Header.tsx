@@ -13,9 +13,7 @@ type Props = {}
 
 const Header = (props: Props) => {
     const productsInCart = useAppSelector((state) => state.productsInCart)
-    const productsInFavorite = useAppSelector(
-        (state) => state.productsInFavorite
-    )
+
     const likeCounter = useAppSelector((state) => state.likeCounter.likeCounter)
 
     return (
@@ -62,17 +60,7 @@ const Header = (props: Props) => {
                                     <NavLink to={'/wishList'}>
                                         <img src={HeaderLike} alt="like" />
                                         <span className="quantity-of-liked">
-                                            {/* {''}
-                                            {Object.keys(
-                                                productsInFavorite
-                                            ).reduce(
-                                                (status, productId) =>
-                                                    status +
-                                                    productsInFavorite[
-                                                        parseInt(productId)
-                                                    ],
-                                                0
-                                            )} */}{' '}
+                                            {' '}
                                             {likeCounter}
                                         </span>
                                     </NavLink>

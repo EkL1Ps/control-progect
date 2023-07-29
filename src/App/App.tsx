@@ -16,6 +16,7 @@ import ProductsTiaras from '../Products/ProductsCategories/ProductsTiaras'
 import ProductsBracelets from '../Products/ProductsCategories/ProductsBracelets'
 import ProductsWatches from '../Products/ProductsCategories/ProductsWatches'
 import ProductsPage from '../ProductsPage/ProductsPage'
+import MainSlider from '../components/MainSlider/MainSlider'
 
 const App = () => {
     return (

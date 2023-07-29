@@ -19,13 +19,36 @@ import { NavLink } from 'react-router-dom'
 import Since from '../Since/Since'
 import productsArray from '../utils/productsArray'
 import MainSlider from '../components/MainSlider/MainSlider'
-
 type Props = {}
 
 const Main = (props: Props) => {
     return (
         <>
-            <MainSlider />
+            <MainSlider
+                reviews={[
+                    {
+                        slideID: 1,
+                        slideDescription: 'Golder earrings with pearls',
+                        slidePrice: 10,
+                        slideImg:
+                            'static/media/dark-earrings.2f88521652713c1be113.webp',
+                    },
+                    {
+                        slideID: 2,
+                        slideDescription: 'Wedding Ring with 12 diamonds',
+                        slidePrice: 35,
+                        slideImg:
+                            'static/media/gold-ring.122fdea3bb3645b272f2.webp',
+                    },
+                    {
+                        slideID: 3,
+                        slideDescription: 'Silver ring with diamond heart',
+                        slidePrice: 35,
+                        slideImg:
+                            'static/media/Silver-ring.69c87dc151c0e407b5de.webp',
+                    },
+                ]}
+            />
 
             <div className="data-under-slider">
                 <div className="data-under-slider-container">

@@ -29,6 +29,10 @@ body {
     max-width: 16.666%;
     flex: 0 0 16.666%;
 }
+.col-slider {
+    max-width: 66.666%;
+    flex: 0 0 66.666%;
+}
 .scarlet-button {
     background-color: #bb5644;
     border-color: #bb5644;
