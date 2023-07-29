@@ -19,6 +19,9 @@ import { NavLink } from 'react-router-dom'
 import Since from '../Since/Since'
 import productsArray from '../utils/productsArray'
 import MainSlider from '../components/MainSlider/MainSlider'
+import slideImgFirst from './main-image/imgForSlider/dark-earrings.webp'
+import slideImgSecond from './main-image/imgForSlider/gold-ring.webp'
+import slideImgThird from './main-image/imgForSlider/Silver-ring.webp'
 type Props = {}
 
 const Main = (props: Props) => {
@@ -30,22 +33,19 @@ const Main = (props: Props) => {
                         slideID: 1,
                         slideDescription: 'Golder earrings with pearls',
                         slidePrice: 10,
-                        slideImg:
-                            'static/media/dark-earrings.2f88521652713c1be113.webp',
+                        sliderImg: `${slideImgFirst}`,
                     },
                     {
                         slideID: 2,
                         slideDescription: 'Wedding Ring with 12 diamonds',
                         slidePrice: 35,
-                        slideImg:
-                            'static/media/gold-ring.122fdea3bb3645b272f2.webp',
+                        sliderImg: `${slideImgSecond}`,
                     },
                     {
                         slideID: 3,
                         slideDescription: 'Silver ring with diamond heart',
                         slidePrice: 35,
-                        slideImg:
-                            'static/media/Silver-ring.69c87dc151c0e407b5de.webp',
+                        sliderImg: `${slideImgThird}`,
                     },
                 ]}
             />

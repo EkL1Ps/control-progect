@@ -49,7 +49,7 @@ export const MainSlider = ({ reviews }: SliderProps) => {
                             <div
                                 className="col-2 left-slide"
                                 style={{
-                                    backgroundImage: `url(${reviews[slide].slideImg})`,
+                                    backgroundImage: `url(${reviews[slide].sliderImg})`,
                                 }}
                             ></div>
                             <div className="col-2 right-slide">

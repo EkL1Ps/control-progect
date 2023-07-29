@@ -25,9 +25,10 @@
         font-family: Jost;
         font-size: 16px;
     }
-    a {
+    span {
         margin: 0 0 50px 50px;
-        display: block;
+        display: inline-block;
+        cursor: pointer;
         &:hover {
             text-decoration: underline;
         }

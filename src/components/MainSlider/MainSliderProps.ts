@@ -2,8 +2,9 @@ export interface IReview {
     slideID: number,
     slideDescription: string,
     slidePrice: number,
-    slideImg: string,
+    sliderImg: string
 }
+
 
 export interface SliderProps {
     reviews: IReview[];

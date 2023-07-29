@@ -12,7 +12,7 @@ const AboutUsPage = (props: Props) => {
                 <div className="title-h1">ABOUT US</div>
             </div>
             <Since />
-            <img className="logo-image" src={HerbLogo} alt="image" />
+            <img className="logo-image" src={HerbLogo} alt="logo" />
             <div className="cart-about-us-wrapper">
                 <div className="row">
                     <div className="col-2">
@@ -29,12 +29,12 @@ const AboutUsPage = (props: Props) => {
                                 Nunc, scelerisque vel netus pulvinar quam
                                 phasellus. Aenean at id nam neque fermentum.
                             </p>
-                            <a href="#">view collection</a>
+                            <span>view collection</span>
                         </div>
                     </div>
                     <div className="col-2">
                         <div className="about-us-image">
-                            <img src={AboutUsImage} alt="image" />
+                            <img src={AboutUsImage} alt="aboutUs" />
                         </div>
                     </div>
                 </div>
