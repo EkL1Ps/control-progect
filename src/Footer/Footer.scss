@@ -42,6 +42,10 @@
         margin-bottom: 30px;
         color: #2d2e36;
     }
+    button {
+        border: 0;
+        cursor: pointer;
+    }
 }
 .footer-widget-fourth {
     h2 {
@@ -75,4 +79,16 @@
 }
 .credit-cards {
     margin-top: 50px;
+}
+.footer-widget-second,
+.footer-widget-thirt,
+.footer-widget-fourth {
+    span {
+        color: #2d2e36;
+        cursor: pointer;
+        &:hover {
+            color: #bb5644;
+            text-decoration: underline;
+        }
+    }
 }

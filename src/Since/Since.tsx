@@ -19,7 +19,7 @@ const Since = (props: Props) => {
                         <img
                             className="main-since-image"
                             src={MainSinceImage}
-                            alt="image"
+                            alt="Queen bracelet"
                         />
                     </div>
                     <div className="col-5 since-info">

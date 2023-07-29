@@ -1,6 +1,5 @@
 import './Products.scss'
 import ProductsPageList from './ProductsPageList'
-import productsArray from '../utils/productsArray'
 import ProductPageFilter from '../components/ProductPageFilter/ProductPageFilter'
 
 type Props = {}

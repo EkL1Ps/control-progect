@@ -23,7 +23,7 @@ type Props = {
 
 const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
     const [count, setCount] = useState<number>(0)
-    const [status, setStatus] = useState<number>(0)
+    const [status] = useState<number>(0)
 
     const onIncrementClick = () => {
         setCount((prevState) => prevState + 1)
@@ -36,14 +36,11 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
     const dispatch = useAppDispatch()
 
     const FavFunc = () => {
-        {
-            isLiked
-                ? dispatch(removeProductFromFavorite({ id, status }))
-                : dispatch(addProductToFavorite({ id, status }))
-        }
-        {
-            isLiked ? dispatch(likeDecrement()) : dispatch(likeIncrement())
-        }
+        isLiked
+            ? dispatch(removeProductFromFavorite({ id, status }))
+            : dispatch(addProductToFavorite({ id, status }))
+
+        isLiked ? dispatch(likeDecrement()) : dispatch(likeIncrement())
     }
 
     return (

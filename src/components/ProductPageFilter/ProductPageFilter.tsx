@@ -7,10 +7,10 @@ const ProductPageFilter = (props: Props) => {
         <>
             <div className="filter-tools">
                 <div>
-                    <a href="#">
+                    <span className="filter-icon">
                         <img src={FilterIcon} alt="filter-icon" />
                         Filters
-                    </a>
+                    </span>
                     <ul className="filter-categories">
                         <NavLink to={'/products'}>
                             <li>All</li>

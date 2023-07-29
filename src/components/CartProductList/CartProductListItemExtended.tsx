@@ -2,7 +2,7 @@ import { Product } from '../../utils/productsArray'
 import TrashIcon from './image/delete-trash-icon.svg'
 import './CartProductListItemExtended.scss'
 import Quantity from '../Quantity/Quantity'
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { useAppDispatch } from '../../redux/hooks'
 import {
     changeProductQuantity,
     removeProductFromCart,

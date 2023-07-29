@@ -8,7 +8,6 @@ import AboutUsPage from '../AboutUsPage/AboutUsPage'
 import ContactsPage from '../ContactsPage/ContactsPage'
 import WishList from '../WishList/WishList'
 import BasketPage from '../BasketPage/BasketPage'
-import { createContext } from 'react'
 import ProductsRings from '../Products/ProductsCategories/ProductsRings'
 import ProductsEarrings from '../Products/ProductsCategories/ProductsEarrings'
 import ProductsNecklace from '../Products/ProductsCategories/ProductsNecklace'
@@ -16,7 +15,6 @@ import ProductsTiaras from '../Products/ProductsCategories/ProductsTiaras'
 import ProductsBracelets from '../Products/ProductsCategories/ProductsBracelets'
 import ProductsWatches from '../Products/ProductsCategories/ProductsWatches'
 import ProductsPage from '../ProductsPage/ProductsPage'
-import MainSlider from '../components/MainSlider/MainSlider'
 
 const App = () => {
     return (

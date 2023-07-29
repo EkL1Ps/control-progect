@@ -45,7 +45,10 @@ const ContactsPage = (props: Props) => {
                         <div className="question-card-content">
                             <div className="col-2">
                                 <div className="contactPage-image">
-                                    <img src={ContactPageImage} alt="image" />
+                                    <img
+                                        src={ContactPageImage}
+                                        alt="contactPageImg"
+                                    />
                                 </div>
                             </div>
                             <div className="col-2 question-card-inputs">

@@ -18,22 +18,22 @@ const Footer = (props: Props) => {
                 <div className="footer-image">
                     <div className="row">
                         <div className="col-6">
-                            <img src={FooterImage1} alt="image" />
+                            <img src={FooterImage1} alt="pieceOfPhoto" />
                         </div>
                         <div className="col-6">
-                            <img src={FooterImage2} alt="image" />
+                            <img src={FooterImage2} alt="pieceOfPhoto" />
                         </div>
                         <div className="col-6">
-                            <img src={FooterImage3} alt="image" />
+                            <img src={FooterImage3} alt="pieceOfPhoto" />
                         </div>
                         <div className="col-6">
-                            <img src={FooterImage4} alt="image" />
+                            <img src={FooterImage4} alt="pieceOfPhoto" />
                         </div>
                         <div className="col-6">
-                            <img src={FooterImage5} alt="image" />
+                            <img src={FooterImage5} alt="pieceOfPhoto" />
                         </div>
                         <div className="col-6">
-                            <img src={FooterImage6} alt="image" />
+                            <img src={FooterImage6} alt="pieceOfPhoto" />
                         </div>
                     </div>
                 </div>
@@ -46,9 +46,9 @@ const Footer = (props: Props) => {
                                     Quam pulvinar leo euismod id eu ultricies.
                                     Placerat proin rhoncus sit.
                                 </p>
-                                <a href="#" className="scarlet-button">
+                                <button className="scarlet-button">
                                     Contact us
-                                </a>
+                                </button>
                                 <div className="credit-cards">
                                     <img src={FooterCreditCards} alt="visa" />
                                 </div>
@@ -57,28 +57,28 @@ const Footer = (props: Props) => {
                                 <h3>Useful links</h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Contact Us</a>
+                                        <span>Contact Us</span>
                                     </li>
                                     <li>
-                                        <a href="#">Help & About us</a>
+                                        <span>Help & About us</span>
                                     </li>
                                     <li>
-                                        <a href="#">Shipping & Returns</a>
+                                        <span>Shipping & Returns</span>
                                     </li>
                                     <li>
-                                        <a href="#">Refond Policy</a>
+                                        <span>Refond Policy</span>
                                     </li>
                                 </ul>
                                 <h3>Delivery</h3>
                                 <ul>
                                     <li>
-                                        <a href="#">How it Works</a>
+                                        <span>How it Works</span>
                                     </li>
                                     <li>
-                                        <a href="#">Free Delivery</a>
+                                        <span>Free Delivery</span>
                                     </li>
                                     <li>
-                                        <a href="#">FAQ</a>
+                                        <span>FAQ</span>
                                     </li>
                                 </ul>
                             </div>
@@ -86,30 +86,30 @@ const Footer = (props: Props) => {
                                 <h3>Customer Service</h3>
                                 <ul>
                                     <li>
-                                        <a href="#">Orders</a>
+                                        <span>Orders</span>
                                     </li>
                                     <li>
-                                        <a href="#">Downloads</a>
+                                        <span>Downloads</span>
                                     </li>
                                     <li>
-                                        <a href="#">Addresses</a>
+                                        <span>Addresses</span>
                                     </li>
                                     <li>
-                                        <a href="#">Accout details</a>
+                                        <span>Accout details</span>
                                     </li>
                                     <li>
-                                        <a href="#">Lost password</a>
+                                        <span>Lost password</span>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-4 footer-widget-fourth">
                                 <h3>Need help?</h3>
-                                <a href="#">
+                                <span>
                                     <h2>+61 (0) 383 766 284</h2>
-                                </a>
-                                <a href="#">
+                                </span>
+                                <span>
                                     <h2>+61 (0) 383 766 284</h2>
-                                </a>
+                                </span>
                                 <ul>
                                     <li> Monday - Friday:</li>
                                     <li> 8am - 5pm</li>
@@ -122,8 +122,8 @@ const Footer = (props: Props) => {
                         </div>
                     </div>
                     <div className="by-who">
-                        © 2023 Betheme by <a href="#">Muffin group</a> | All
-                        Rights Reserved | Powered by <a href="#">WordPress</a>
+                        © 2023 Betheme by <span>Muffin group</span> | All Rights
+                        Reserved | Powered by <span>WordPress</span>
                     </div>
                 </div>
             </footer>

@@ -28,7 +28,7 @@ const Inspirations = (props: Props) => {
                         <div className="col-3">
                             <img
                                 src={InspirationsFirstImage}
-                                alt="image"
+                                alt="PrettyGirl"
                                 className="insp-first-image"
                             />
                         </div>
@@ -37,7 +37,10 @@ const Inspirations = (props: Props) => {
                 <div className="inspirations-second-third-fourth-block">
                     <div className="row">
                         <div className="insp-second-fourth-image-block">
-                            <img src={InspirationsSecondImage} alt="image" />
+                            <img
+                                src={InspirationsSecondImage}
+                                alt="PrettyGirl"
+                            />
                         </div>
                         <div className="insp-second-third-fourth-downblock">
                             <h2>Rhoncus ipsum odio massa tristique.</h2>
@@ -83,14 +86,20 @@ const Inspirations = (props: Props) => {
                             </NavLink>
                         </div>
                         <div className="insp-second-fourth-image-block">
-                            <img src={InspirationsThirdImage} alt="image" />
+                            <img
+                                src={InspirationsThirdImage}
+                                alt="PrettyGirl"
+                            />
                         </div>
                     </div>
                 </div>
                 <div className="inspirations-second-third-fourth-block">
                     <div className="row">
                         <div className="insp-second-fourth-image-block">
-                            <img src={InspirationsFourthImage} alt="image" />
+                            <img
+                                src={InspirationsFourthImage}
+                                alt="PrettyGirl"
+                            />
                         </div>
                         <div className="insp-second-third-fourth-downblock">
                             <h2>

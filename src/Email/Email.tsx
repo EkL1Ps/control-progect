@@ -5,7 +5,7 @@ type Props = {}
 const Email = (props: Props) => {
     return (
         <div className="register">
-            <img src={PlantRegister} alt="image" />
+            <img src={PlantRegister} alt="plant" />
             <h6 className="vestibulum">VESTIBULUM</h6>
             <p>
                 Subscribe to our newsletter
@@ -14,9 +14,7 @@ const Email = (props: Props) => {
             </p>
             <div>
                 <input type="email" placeholder="Your e-mail" />
-                <a href="#" className="scarlet-button">
-                    Sigh Up
-                </a>
+                <button className="scarlet-button">Sigh Up</button>
             </div>
         </div>
     )

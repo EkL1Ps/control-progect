@@ -230,7 +230,7 @@ const Main = (props: Props) => {
                             <img
                                 className="s-a-l-o-image"
                                 src={SaloImage}
-                                alt="image"
+                                alt="gift"
                             />
                         </div>
                         <div className="s-a-l-o-content-container t-a-left">
@@ -248,30 +248,28 @@ const Main = (props: Props) => {
                         </div>
                     </div>
                 </div>
-                <a href="#" className="scarlet-button">
-                    See offer
-                </a>
+                <button className="scarlet-button">See offer</button>
             </div>
             <div className="partners-title">
                 <div className="partners">
                     <div className="row">
                         <div className="col-6 ">
-                            <img src={SutterSpeed} alt="image" />
+                            <img src={SutterSpeed} alt="SutterSpeed" />
                         </div>
                         <div className="col-6">
-                            <img src={NaturalCompany} alt="image" />
+                            <img src={NaturalCompany} alt="NaturalCompany" />
                         </div>
                         <div className="col-6">
-                            <img src={UrbanCompany} alt="image" />
+                            <img src={UrbanCompany} alt="UrbanCompany" />
                         </div>
                         <div className="col-6">
-                            <img src={SemmerCompany} alt="image" />
+                            <img src={SemmerCompany} alt="SemmerCompany" />
                         </div>
                         <div className="col-6">
-                            <img src={IconicCompany} alt="image" />
+                            <img src={IconicCompany} alt="IconicCompany" />
                         </div>
                         <div className="col-6">
-                            <img src={AliseBoutiqus} alt="image" />
+                            <img src={AliseBoutiqus} alt="AliseBoutiqus" />
                         </div>
                     </div>
                 </div>

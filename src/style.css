@@ -10,6 +10,9 @@
 body {
     background-color: rgb(255, 248, 238);
 }
+button {
+    cursor: pointer !important;
+}
 .row {
     display: flex;
 }

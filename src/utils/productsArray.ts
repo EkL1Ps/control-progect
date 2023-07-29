@@ -16,7 +16,7 @@ const productsArray: Product[] = [
         title: 'Dark earrings',
         price: 10,
         image: '/images/dark-earrings.webp',
-        alt: 'image',
+        alt: 'dark-earrings',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'earrings',
@@ -27,7 +27,7 @@ const productsArray: Product[] = [
         title: 'Fancy earrings',
         price: 12,
         image: '/images/fancy-earrings.webp',
-        alt: 'image',
+        alt: 'fancy-earrings',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'earrings',
@@ -37,7 +37,7 @@ const productsArray: Product[] = [
         title: 'Gold necklace',
         price: 100,
         image: '/images/gold-necklace.webp',
-        alt: 'image',
+        alt: 'gold-necklace',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'necklace',
@@ -48,7 +48,7 @@ const productsArray: Product[] = [
         title: 'Gold ring',
         price: 35,
         image: '/images/gold-ring.webp',
-        alt: 'image',
+        alt: 'gold-ring.webp',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'ring',
@@ -58,7 +58,7 @@ const productsArray: Product[] = [
         title: 'Head crown',
         price: 1480,
         image: '/images/head-crown.webp',
-        alt: 'image',
+        alt: 'head-crown',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'crown',
@@ -69,7 +69,7 @@ const productsArray: Product[] = [
         title: 'Light earrings',
         price: 12,
         image: '/images/light-earrings.webp',
-        alt: 'image',
+        alt: 'light-earrings',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'earrings',
@@ -80,7 +80,7 @@ const productsArray: Product[] = [
         title: 'Queen bracelet',
         price: 1120,
         image: '/images/Queen-bracelet.webp',
-        alt: 'image',
+        alt: 'Queen-bracelet',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'bracelet',
@@ -91,7 +91,7 @@ const productsArray: Product[] = [
         title: 'Silver ring',
         price: 35,
         image: '/images/Silver-ring.webp',
-        alt: 'image',
+        alt: 'Silver-ring',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'ring',
@@ -101,7 +101,7 @@ const productsArray: Product[] = [
         title: 'Wedding ring',
         price: 320,
         image: '/images/Wedding-ring.webp',
-        alt: 'image',
+        alt: 'Wedding-ring',
         description:
             'Amet ipsum, enim massa enim mattis pulvinar. Pretium sem a, sed lacus ac. Mattis sapien nunc malesuada tincidunt. Libero integer velit, lorem est. Velit adipiscing scelerisque eget nunc.',
         categories: 'ring',

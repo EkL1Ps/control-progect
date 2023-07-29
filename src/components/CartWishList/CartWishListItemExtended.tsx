@@ -8,11 +8,7 @@ type Props = {
     id: number
 }
 
-const CartWishListItemExtended = ({ product, id }: Props) => {
-    const isLiked = useAppSelector((state) => state.productsLikeState[id])
-
-    const dispatch = useAppDispatch()
-
+const CartWishListItemExtended = ({ product }: Props) => {
     return (
         <>
             <div>

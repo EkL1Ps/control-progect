@@ -12,7 +12,8 @@
     padding: 15px 2%;
     display: flex;
     justify-content: right;
-    a {
+    a,
+    .filter-icon {
         width: 100px !important;
         display: block !important;
         z-index: 10;
@@ -22,6 +23,7 @@
         color: #626262;
         width: 74px;
         align-items: center;
+        cursor: pointer;
         &:hover {
             text-decoration: underline;
         }
