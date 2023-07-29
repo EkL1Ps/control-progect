@@ -1,5 +1,4 @@
 import '../CartProductList/CartProductListItemExtended.scss'
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { Product } from '../../utils/productsArray'
 import { Link } from 'react-router-dom'
 

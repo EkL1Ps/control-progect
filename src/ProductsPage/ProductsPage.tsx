@@ -42,15 +42,21 @@ const ProductsPage = ({
 
                         <div className="possibilities">
                             <p>
-                                <img src={FreeRuturnImg} alt="image" />
+                                <img src={FreeRuturnImg} alt="FreeRuturnImg" />
                                 30 days free return
                             </p>
                             <p>
-                                <img src={EasyPaymentImg} alt="image" />
+                                <img
+                                    src={EasyPaymentImg}
+                                    alt="EasyPaymentImg"
+                                />
                                 Easy payment
                             </p>
                             <p>
-                                <img src={HoursDeliveryImg} alt="image" />
+                                <img
+                                    src={HoursDeliveryImg}
+                                    alt="HoursDeliveryImg"
+                                />
                                 24 hours delivery
                             </p>
                         </div>
@@ -63,7 +69,7 @@ const ProductsPage = ({
                             </NavLink>
                         </div>
                         <div className="woman-self-page">
-                            <img src={SelfPageWoman} alt="image" />
+                            <img src={SelfPageWoman} alt="woman" />
                         </div>
                         <div className="perfect-gift">
                             <h2>Perfect gift</h2>
