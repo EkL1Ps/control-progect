@@ -49,13 +49,16 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
                 <div className="adapt-like-btn">
                     <button
                         className="adapt-LikeBtn"
-                        onClick={() => (dispatch(toggleLike(id)), FavFunc())}
+                        onClick={() => {
+                            dispatch(toggleLike(id))
+                            FavFunc()
+                        }}
                     >
-                        {isLiked ? 
+                        {isLiked ? (
                             <img src={isLikedBtn} alt="isLikedBtn" />
-                         : 
+                        ) : (
                             <img src={isNotLikedBtn} alt="isNotLikedBtn" />
-                        }
+                        )}
                     </button>
                 </div>
                 <img src={image} alt={alt} />
@@ -84,13 +87,16 @@ const ProductsPageListItem = ({ id, title, price, image, alt }: Props) => {
 
                     <button
                         className="LikeBtn"
-                        onClick={() => (dispatch(toggleLike(id)), FavFunc())}
+                        onClick={() => {
+                            dispatch(toggleLike(id))
+                            FavFunc()
+                        }}
                     >
-                        {isLiked ? 
+                        {isLiked ? (
                             <img src={isLikedBtn} alt="isLikedBtn" />
-                         : 
+                        ) : (
                             <img src={isNotLikedBtn} alt="isNotLikedBtn" />
-                        }
+                        )}
                     </button>
                 </div>
             </div>
